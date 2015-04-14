@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>
-      Scaffolding &middot; Primer
+      Overview &middot; Cru Styleguide
     </title>
 
     <link rel="stylesheet" href="/docs.css">
@@ -25,14 +25,13 @@
       <div class="container">
         <a href="/" class="masthead-logo">
           <span class="mega-octicon octicon-package"></span>
-          Primer
+          Cru Styleguide
         </a>
 
         <nav class="masthead-nav">
-          <a  href="/scaffolding">Docs</a>
+          <a  href="/overview">Overview</a>
           <a  href="/about">About</a>
-          <a href="https://github.com/primer/primer" target="_blank">GitHub</a>
-          <a href="https://github.com/primer/primer/blob/master/README.md#install" target="_blank">Install</a>
+          <a href="https://github.com/CruGlobal/crubrand" target="_blank">Crubrand on Github</a>
         </nav>
       </div>
     </header>
@@ -44,8 +43,8 @@
   <div class="one-fourth column">
     
       <nav class="menu docs-menu">
-  <a class="menu-item selected" href="/scaffolding/">
-    Scaffolding
+  <a class="menu-item selected" href="/overview/">
+    Overview
   </a>
   <a class="menu-item " href="/layout/">
     Layout
@@ -98,36 +97,41 @@
   </div>
   <div class="three-fourths column markdown-body">
     <h1 class="page-title">
-      Scaffolding
+      Overview
     </h1>
     <div class="markdown-body">
-      <p>Scaffolding refers to the global resets and dependencies that Primer is built upon.</p>
+      <p>Get the lowdown on the key pieces of Bootstrap’s infrastructure, including our approach to better, faster, stronger web development.</p>
 
 <h2 id="contents">Contents</h2>
 
 <ul id="markdown-toc">
-  <li><a href="#contents">Contents</a></li>
-  <li><a href="#html5-doctype">HTML5 doctype</a></li>
-  <li><a href="#box-sizing">Box-sizing</a></li>
-  <li><a href="#built-on-normalize">Built on Normalize</a></li>
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#html5-doctype" id="markdown-toc-html5-doctype">HTML5 doctype</a></li>
+  <li><a href="#mobile-first" id="markdown-toc-mobile-first">Mobile first</a></li>
+  <li><a href="#typography-and-links" id="markdown-toc-typography-and-links">Typography and links</a></li>
 </ul>
 
 <h2 id="html5-doctype">HTML5 doctype</h2>
 
-<p>Primer makes use of certain HTML elements and CSS properties that <strong>require</strong> the use of the HTML5 doctype. Include it at the beginning of all your pages.</p>
+<p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
 
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
   ...
 <span class="nt">&lt;/html&gt;</span></code></pre></div>
 
-<h2 id="box-sizing">Box-sizing</h2>
+<h2 id="mobile-first">Mobile first</h2>
 
-<p>We reset <code>box-sizing</code> to <code>border-box</code> for every element in Primer. This allows us to more easily assign widths to elements that also have <code>padding</code> and <code>border</code>s.</p>
+<p>Bootstrap is mobile first. Mobile first styles can be found throughout the entire library instead of in separate files.</p>
 
-<h2 id="built-on-normalize">Built on Normalize</h2>
+<p>To ensure proper rendering and touch zooming, add the viewport meta tag to your <code>&lt;head&gt;</code>.</p>
 
-<p>For improved cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> to correct small inconsistencies across browsers and devices.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
+
+<h2 id="typography-and-links">Typography and links</h2>
+
+<p>Crubrand sets the basic global display, typography, and link styles.
+More details can be found in the following sections <a href="/Links/">Type</a>, <a href="/links/">Links</a>.</p>
 
     </div>
   </div>
@@ -135,8 +139,8 @@
 
 
       <footer class="footer">
-        Copyright GitHub 2015.<br>
-        Created and maintained by the CSS team at GitHub.
+        Copyright Cru 2015.<br>
+        Primer was created by the CSS team at GitHub.
       </footer>
     </div>
 
