@@ -1,0 +1,36 @@
+{
+  "name": "crubrand",
+  "version": "1.0.0",
+  "homepage": "https://github.com/CruGlobal/crubrand",
+  "authors": [
+    "Elikem Adadevoh <elikem@gmail.com>"
+  ],
+  "description": "A Cru branded scss theme for web projects",
+  "main": "_crubrand.scss",
+  "keywords": [
+    "cru.org",
+    "scss",
+    "css",
+    "styleguide"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "3.3.1"
+  },
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "b7703f43d3eabcc874fce5e4492956f98c7661dc"
+  },
+  "_source": "git://github.com/CruGlobal/crubrand.git",
+  "_target": "*",
+  "_originalSource": "crubrand"
+}
