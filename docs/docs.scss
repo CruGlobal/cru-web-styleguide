@@ -14,7 +14,7 @@
 // Import Primer itself
 //
 
-@import "../scss/primer";
+//@import "../scss/primer";
 @import "bower_components/octicons/octicons/octicons.css";
 @import "bower_components/primer-user-content/components/markdown";
 @import "css/anchor";
@@ -54,28 +54,56 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", $body-font;
   font-size: 1rem;
   background-color: #f7f7f7;
+
+  .is-open--nav & {
+      overflow: hidden;
+  }
 }
 
+.container {
+
+    @include mq(550px) {
+        @include mq(993px, max) {
+            width: 100%;
+        }
+    }
+}
+
+.pageContent,
+.pageNav--left {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pageContent {
+    width: 80%;
+
+    @include mq(993px, max) {
+        width: 100%;
+    }
+}
+
+.pageNav--left {
+    width: 20%;
+
+    @include mq(993px, max) {
+        display: none
+    }
+}
 /**
  * Branding
  */
 .titleGroup {
     float: left;
-    width: 24%;
+    width: 10%;
     height: 100%;
     max-height: 64px;
     display: inline-block;
-
-    @include mq(520px) {
-        width: 15%;
-    }
-
-    @include mq(840px) {
-        width: 10%;
-    }
 }
 
 /**
@@ -89,19 +117,13 @@ body {
      min-height:  $nav-height;
      margin-bottom: 0;
      box-shadow: none;
+     min-width: 1030px;
  }
 
  .navigation {
      float: left;
      display: inline-block;
-
-     @include mq(520px) {
-         width: 85%;
-     }
-
-     @include mq(840px) {
-         width: 90%;
-     }
+     width: 90%;
  }
 
  .navigation-link {
@@ -194,7 +216,7 @@ body {
     &:after {
         border-radius: 4px 0 0 4px;
         right: 4px;
-        width: 178px;
+        width: 141px;
     }
 
     &:before,
@@ -259,14 +281,14 @@ body {
     }
 }
 
-
-
 .swatch {
     background-color: #f9f9f9;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 2px;
     box-shadow: 0 0 1px rgba(0,0,0,0.4);
+
+    @include font-size(14px);
 }
 
 
@@ -278,4 +300,91 @@ body {
     height: 60px;
     width: 100%;
     margin: 0 0.8em 0.5em 0;
+}
+
+
+.lunchMenu {
+    z-index: 5000;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 15em;
+    max-width: 75%;
+    overflow-y: auto;
+    background: #3d3e3f;
+    padding: 4.8125em 0 1.75em 0;
+
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+
+    .js & {
+        left: auto;
+        right: 100%;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    .is-open--nav & {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        left: 0;
+    }
+}
+
+.nav-open,
+.lunchMenu {
+    @include mq(994px) {
+        display: none
+    }
+}
+
+.overlay {
+    z-index: 4000;
+    position: absolute;
+    position: fixed;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    background: rgba(73, 75, 76, 0.7);
+    transition: opacity 300ms ease,height 1ms 300ms ease;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+
+    .is-open--nav &{
+        height: 100%;
+        opacity: 1;
+        transition: opacity 300ms ease;
+    }
+}
+
+.nav-open {
+    position: fixed;
+    bottom: em(20px);
+    left: em(4px);
+
+    svg {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+
+        path {
+            fill: $colorCru-gray;
+        }
+    }
+
+    span {
+        position: absolute;
+        top: 6px;
+        left: 48px;
+        color: $colorCru-gray;
+    }
 }

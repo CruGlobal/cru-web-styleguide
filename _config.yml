@@ -8,7 +8,7 @@ kramdown:
 permalink: pretty
 source: docs
 
-baseurl: /cru-web-styleguide
+baseurl: /cru-web-styleguide/
 
 sass:
   sass_dir: ../

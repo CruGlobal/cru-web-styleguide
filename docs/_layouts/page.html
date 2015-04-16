@@ -3,12 +3,12 @@ layout: default
 ---
 
 <div class="row docs-layout">
-  <div class="col-ms-12  col-lg-4">
+  <div class="pageNav--left">
     {% unless page.title == "About" %}
       {% include sidenav.html %}
     {% endunless %}
   </div>
-  <div class="col-ms-12  col-lg-8 column markdown-body">
+  <div class="pageContent markdown-body">
       <div class="panel  panel-default  p-">
           <h1 class="page-title">
             {{ page.title }}

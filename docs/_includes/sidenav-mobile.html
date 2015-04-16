@@ -1,0 +1,20 @@
+<nav class="lunchMenu  nav--closed  nav--hidden" id="nav" role="navigation">
+    <ul class="card">
+        <li>
+            <label class="card-title">Design Elements</label>
+        </li>
+        <li>
+            <a class="card-link  icon--link{% if page.title == "Color Palatte" %}  is-active{% endif %}" href="{{ site.baseurl }}/design/design-elements/color-palette">Color Palette</a>
+        </li>
+        <li>
+            <a class="card-link  icon--link{% if page.title == "Colors" %}  is-active{% endif %}" href="{{ site.baseurl }}/colors/">Colors</a>
+        </li>
+        <li>
+            <a class="card-link  icon--link{% if page.title == "Markdown" %}  is-active{% endif %}" href="{{ site.baseurl }}/markdown/">Markdown</a>
+        </li>
+    </ul>
+    <a class="nav-close" id="nav-close" href="#top">
+        <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg--close"></use></svg>
+        <span>Return to Top of Page</span>
+    </a>
+</nav>
