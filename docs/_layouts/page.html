@@ -2,18 +2,20 @@
 layout: default
 ---
 
-<div class="columns docs-layout">
-  <div class="one-fourth column">
+<div class="row docs-layout">
+  <div class="col-ms-12  col-lg-4">
     {% unless page.title == "About" %}
       {% include sidenav.html %}
     {% endunless %}
   </div>
-  <div class="three-fourths column markdown-body">
-    <h1 class="page-title">
-      {{ page.title }}
-    </h1>
-    <div class="markdown-body">
-      {{ content }}
-    </div>
+  <div class="col-ms-12  col-lg-8 column markdown-body">
+      <div class="panel  panel-default  p-">
+          <h1 class="page-title">
+            {{ page.title }}
+          </h1>
+          <div class="markdown-body">
+            {{ content }}
+          </div>
+      </div>
   </div>
 </div>
