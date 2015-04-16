@@ -20,6 +20,24 @@
 @import "css/anchor";
 @import "css/syntax";
 
+@import "bower_components/crubrand/crubrand";
+@import "_settings.scss";
+
+$enable-margins:          true;
+$enable-margins--tiny:    true;
+$enable-margins--small:   true;
+$enable-margins--large:   true;
+$enable-margins--huge:    true;
+$enable-margins--none:    true;
+
+
+$enable-paddings:         true;
+$enable-paddings--tiny:   true;
+$enable-paddings--small:  true;
+$enable-paddings--large:  true;
+$enable-paddings--huge:   true;
+$enable-paddings--none:   true;
+
 .icon--chevronRight,
 %icon--chevronRight {
     background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232%22%20height%3D%22232%22%20viewBox%3D%220%200%2032%20232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M11.336%20123.5l12.5%2012.5-3.334%203.332-9.166%209.168-3.334-3.334L17.17%20136l-9.168-9.168%203.334-3.332%22%20fill%3D%22%23206FAC%22%2F%3E%3Cpath%20d%3D%22M11.336%2083.5l12.5%2012.5-3.334%203.332-9.166%209.168-3.334-3.334L17.17%2096l-9.168-9.168%203.334-3.332%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M11.336%2043.5l12.5%2012.5-3.334%203.332-9.166%209.168-3.334-3.334L17.17%2056l-9.168-9.168%203.334-3.332%22%20fill%3D%22%2367737B%22%2F%3E%3Cpath%20d%3D%22M11.336%203.5l12.5%2012.5-3.334%203.332-9.166%209.168-3.334-3.334L17.17%2016%208.002%206.832%2011.336%203.5%22%20fill%3D%22%233A434E%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
@@ -41,304 +59,117 @@ body {
   background-color: #f7f7f7;
 }
 
-// Make containers responsive
-.container {
-  width: auto;
-  max-width: 1020px;
-  padding-left: 20px;
-  padding-right: 20px;
+/**
+ * Branding
+ */
+.titleGroup {
+    float: left;
+    width: 24%;
+    height: 100%;
+    max-height: 64px;
+    display: inline-block;
+
+    @include mq(520px) {
+        width: 15%;
+    }
+
+    @include mq(840px) {
+        width: 10%;
+    }
 }
 
-.markdown-body {
-  overflow: visible;
-}
+/**
+ * Site Header
+ */
 
+ $nav-height: 70px;
 
-//
-// Custom button
-//
+ .siteHeader {
+     height:  $nav-height;
+     min-height:  $nav-height;
+     margin-bottom: 0;
+     box-shadow: none;
+ }
 
-.btn-reverse {
-  color: #fff;
-  background: none;
-  border: 1px solid #fff;
+ .navigation {
+     float: left;
+     display: inline-block;
 
-  &:hover,
-  &:active {
-    color: $brand-blue;
-    background: #fff;
-    border-color: #fff;
-    box-shadow: none;
-  }
-}
+     @include mq(520px) {
+         width: 85%;
+     }
 
+     @include mq(840px) {
+         width: 90%;
+     }
+ }
 
-//
-// Site header
-//
-
-.masthead {
-  padding-top:    1rem;
-  padding-bottom: 1rem;
-  text-align: center;
-  background-color: $brand-blue;
-
-  a {
-    color: rgba(255,255,255,.5);
+ .navigation-link {
+    display: inline-block;
+    line-height: $nav-height - 3px;
+    padding: 0 18px;
+    font-weight: bold;
+    letter-spacing: .04em;
+    font-size: 14px;
+    color: #3a3a3a;
 
     &:hover {
-      color: #fff;
-      text-decoration: none;
+        outline: none;
+        text-decoration: none;
+        background-color: #f9f9f9;
     }
-  }
+ }
 
-  .masthead-logo {
-    display: inline-block;
-    font-size: 1.5rem;
-    color: #fff;
-
-    .mega-octicon {
-      float: left;
-      margin-right: .5rem;
-    }
-  }
-
-  @media (min-width: 34em) {
-    text-align: left;
-
-    .masthead-logo {
-      float: left;
-    }
-  }
+.siteNav--primary {
+    box-shadow: none;
 }
-
-.masthead-nav {
-  margin-top: 1rem;
-  font-size: 1rem;
-
-  a {
-    display: inline-block;
-
-    &:not(:last-child) {
-      margin-right: 1.25rem;
-    }
-  }
-
-  .active {
-    color: #fff;
-    font-weight: 500;
-  }
-
-  @media (max-width: 34em) {
-    padding-top: 1rem;
-    border-top: .075rem solid rgba(255, 255, 255, 0.25);
-  }
-
-  @media (min-width: 34em) {
-    float: right;
-    margin-top: .5rem;
-  }
-}
-
-
-//
-// Homepage jumbotron
-//
-
-.jumbotron {
-  margin-top: -2rem;
-  margin-bottom: 3rem;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-  background-color: $brand-blue;
-  font-size: 1.25rem;
-  color: #fff;
-  text-align: center;
-
-  h1 {
-    font-size: 2.5em;
-    font-weight: normal;
-  }
-
-  .btn {
-    padding: .75em 1.15em;
-    font-size: inherit;
-    font-weight: normal;
-    line-height: 1;
-  }
-
-  @media (min-width: 34em) {
-    padding-top: 6rem;
-    padding-bottom: 8rem;
-    font-size: 1.5rem;
-    text-align: left;
-  }
-}
-
-.about-that {
-
-  @media (max-width: 760px) {
-    .column {
-      float: none;
-      width: 100%;
-      margin-bottom: 30px;
-    }
-  }
-
-  p {
-    padding-right: .5rem;
-    color: #555;
-    line-height: 1.5;
-  }
-
-  h2 {
-    font-weight: normal;
-  }
-}
-
-
-//
-// Layout
-//
-
-// Override the default layout to make it stack
-.docs-layout {
-  @media (max-width: 34em) {
-    > .column {
-      float: none;
-      width: 100%;
-    }
-  }
-}
-
-//
-// Footer
-//
-
-.footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin-top: 3rem;
-  line-height: 1.75;
-  color: #7a7a7a;
-  border-top: 1px solid #eee;
-}
-
-
-//
-// Side menu
-//
-
-
-//
-// Examples
-//
-
-.docs-example {
-  position: relative;
-  padding: 15px;
-  font-size: 13px;
-  line-height: 1.4;
-  border: 1px solid #e5e5e5;
-  border-radius: .25rem .25rem 0 0;
-
-  + .highlight {
-    margin-top: -1px;
-    border: 1px solid #e5e5e5;
-    border-radius: 0 0 .25rem .25rem;
-  }
-
-  > p:last-child,
-  > .menu:last-child,
-  > .tabnav:last-child,
-  > blockquote:last-child {
-    margin-bottom: 0;
-  }
-
-  .menu,
-  .filter-list,
-  .sunken-menu {
-    max-width: 200px;
-  }
-
-  // Grid
-  .container {
-    width: 100%;
-    padding-left: $grid-gutter;
-    padding-right: $grid-gutter;
-  }
-  .columns + .columns {
-    margin-top: 10px;
-  }
-  .column {
-    padding: $grid-gutter;
-    font-family: $mono-font;
-    background-color: lighten($brand-green, 40%);
-    border: 1px solid lighten($brand-green, 30%);
-  }
-
-  // Override Markdown styles to restore values from `_type.scss`
-  ul,
-  ol {
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  // Flex table
-  .flex-table-item > .btn {
-    margin-left: 10px;
-  }
-}
-
-.page-title + .markdown-body > p:first-child {
-  @extend .lead;
-}
-
-
-//
-// Markdown generated ToC
-//
-
-// Hide the first child li because it's always going to be "Contents".
-#markdown-toc > li:first-child {
-  display: none;
-}
-
-
-//
-// Branding colors
-//
-
-.swatch {
-  display: inline-block;
-  width: 6rem;
-  height: 6rem;
-  border-radius: .25rem;
-}
-
-.swatch-blue { background-color: $brand-blue; }
-.swatch-green { background-color: $brand-green; }
-.swatch-red { background-color: $brand-red; }
-.swatch-orange { background-color: $brand-orange; }
-.swatch-purple { background-color: $brand-purple; }
-
-.swatch-gray-light { background-color: $brand-gray-light; }
-.swatch-gray { background-color: $brand-gray; }
-.swatch-gray-dark { background-color: $brand-gray-dark; }
-
-.docs-menu {
-    box-shadow: 0 0 1px 0 rgba(44,54,67,0.1);
-}
-
 
 /**
  * Site Nav Secondary
  */
-.siteNav--secondary {
+ $subHeader-height: 53px;
+
+.subHeader {
+    height:  $subHeader-height;
+    margin-bottom: $base-spacing-unit;
+    background-color: #ededed;
+}
+
+.subHeader-title {
+    line-height:  $subHeader-height;
+    margin-bottom: 0;
+}
+
+.secondaryNav {
+}
+
+.secondaryNav-link {
     position: relative;
-    background: #fff;
-    min-height: 60px;
+    color: $colorCru-gray;
+    margin: 0 8px;
+    width: auto;
+
+    line-height:  $subHeader-height;
+    font-weight: bold;
+
+    @include font-size(13px, false);
+
+    &.is-active {
+        &:after{
+            position: absolute;
+            bottom: 0px;
+            left: 18px;
+            right: 18px;
+            content: '';
+            display: block;
+            height: 3px;
+            background-color: $colorCru-gold;
+        }
+    }
+
+    &:hover {
+        color: $colorCru-gray;
+    }
 }
 
 .card {
@@ -363,7 +194,7 @@ body {
     &:after {
         border-radius: 4px 0 0 4px;
         right: 4px;
-        width: 196px;
+        width: 178px;
     }
 
     &:before,
@@ -371,7 +202,7 @@ body {
         position: absolute;
         z-index: 10;
         background-color: #f7f7f7;
-        height: 10px;
+        height: 11px;
         bottom: 100%;
         content: "";
         display: block;
@@ -426,4 +257,25 @@ body {
         background-size: cover;
         pointer-events: none;
     }
+}
+
+
+
+.swatch {
+    background-color: #f9f9f9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.4);
+}
+
+
+.swatch-preview {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: block;
+    float: left;
+    height: 60px;
+    width: 100%;
+    margin: 0 0.8em 0.5em 0;
 }
