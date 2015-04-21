@@ -216,7 +216,11 @@ body {
     &:after {
         border-radius: 4px 0 0 4px;
         right: 4px;
-        width: 141px;
+        width: 130px;
+
+        @include mq(1200px) {
+            width: 169px;
+        }
     }
 
     &:before,
