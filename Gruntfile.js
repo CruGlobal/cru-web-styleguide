@@ -62,6 +62,9 @@ module.exports = function(grunt) {
     // Build tooling
 
     watch: {
+        options: {
+            livereload: true,
+        },
       sass: {
         files: ['scss/**/*.scss', 'docs/docs.scss'],
         tasks: ['sass', 'autoprefixer', 'parker']
