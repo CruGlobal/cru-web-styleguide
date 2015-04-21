@@ -1,0 +1,14 @@
+.icon--cruGlobal {
+	background: url('../../image-fallbacks/cru-global.png') no-repeat top center;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    max-width: 95px;    
+    padding-top: 90px;
+}
+
+.icon--cruLogo {
+	background: url('../../image-fallbacks/cru-logo.png') no-repeat center top;
+    margin-right: 12px;
+    margin-left: 12px;
+}

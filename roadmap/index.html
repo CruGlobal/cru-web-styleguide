@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="js">
+<!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +17,12 @@
     <title>
       Roadmap &middot; Cru Styleguide
     </title>
+    <script>
+/*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+(function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+    grunticon(["/cru-web-styleguide/css/bg/icons.data.svg.css", "/cru-web-styleguide/css/bg/icons.data.png.css", "/cru-web-styleguide/css/bg/icons.fallback.css"]);
+</script>
+<noscript><link href="/cru-web-styleguide/css/bg/icons.fallback.css" rel="stylesheet"></noscript>
 
     <link rel="stylesheet" href="/cru-web-styleguide/docs.css">
 
@@ -21,25 +32,34 @@
   </head>
   <body>
 
-    <header class="masthead">
-      <div class="container">
-        <a href="/cru-web-styleguide/" class="masthead-logo">
-          <span class="mega-octicon octicon-package"></span>
-          Cru Styleguide
-        </a>
+    <header class="navbar  navbar-default  siteHeader">
+        <hgroup class="titleGroup  navbar-header">
+            <a href="/cru-web-styleguide/" title="Return to Homepage" class="icon--cruLogo"><h1 class="sr-only">Cru is a caring community passionate about connecting people to Jesus Christ</h1></a>
+        </hgroup>
 
-        <nav class="masthead-nav">
-          <a  href="/cru-web-styleguide/overview">Overview</a>
-          <a  href="/cru-web-styleguide/about">About</a>
-          <a href="https://github.com/CruGlobal/crubrand" target="_blank">Crubrand on Github</a>
+        <nav class="navigation">
+          <a class="navigation-link" href="/cru-web-styleguide/overview">Overview</a>
+          <a class="navigation-link" href="/cru-web-styleguide/about">About</a>
+          <a class="navigation-link" href="https://github.com/CruGlobal/crubrand" target="_blank">Crubrand on Github</a>
         </nav>
-      </div>
     </header>
 
-    
+    <header class="subHeader">
+        <div class="container">
+            <h2 class="subHeader-title  u-floatLeft  h4">Test Title</h2>
+            <ul class="listInline  u-floatRight  subNav">
+                <li>
+                    <a href="" class="secondaryNav-link  is-active  u-linkClean">Design Elements</a>
+                </li>
+                <li>
+                    <a href="" class="secondaryNav-link  u-linkClean">UI Elements</a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
-    <div class="container">
-      <div class="columns docs-layout">
+        <div class="container">
+            <div class="columns docs-layout">
   <div class="three-fourths column markdown-body">
     <h1 class="page-title">
       Roadmap
@@ -81,17 +101,59 @@
   </div>
 </div>
 
+        </div>
+        <footer class="footer  u-textCenter">
+            <p class="m--">Copyright Cru 2015.</p>
+            <p><small>This styleguide was created using <a href="https://github.com/primer/primer">Primer</a>.</small></p>
+        </footer>
 
-      <footer class="footer">
-        Copyright Cru 2015.<br>
-        Primer was created by the CSS team at GitHub.
-      </footer>
-    </div>
+        <div class="overlay  js-overlay"></div>
+        <nav class="lunchMenu  nav--closed  nav--hidden" id="nav" role="navigation">
+    <ul class="card">
+        <li>
+            <label class="card-title">Design Elements</label>
+        </li>
+        <li>
+            <a class="card-link  icon--link" href="/cru-web-styleguide/design/design-elements/color-palette">Color Palette</a>
+        </li>
+        <li>
+            <a class="card-link  icon--link" href="/cru-web-styleguide/colors/">Colors</a>
+        </li>
+        <li>
+            <a class="card-link  icon--link" href="/cru-web-styleguide/markdown/">Markdown</a>
+        </li>
+    </ul>
+    <a class="nav-close" id="nav-close" href="#top">
+        <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg--close"></use></svg>
+        <span>Return to Top of Page</span>
+    </a>
+</nav>
 
-    <script src="/cru-web-styleguide/js/anchor.min.js"></script>
-    <script>
-      var selector = '.markdown-body h2, .markdown-body h3';
-      addAnchors(selector);
-    </script>
-  </body>
+        <a class="nav-open  js-nav-open" href="#nav">
+            <svg>
+                <g xmlns="http://www.w3.org/2000/svg" id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" sketch:type="MSPage">
+                    <path d="M19.7178139,39 C30.4873665,39 39.2178139,30.2695526 39.2178139,19.5 C39.2178139,8.73044738 30.4873665,0 19.7178139,0 C8.94826129,0 0.217813915,8.73044738 0.217813915,19.5 C0.217813915,30.2695526 8.94826129,39 19.7178139,39 Z M10.6323953,26.0161134 C10.6323953,26.3356204 10.8954221,26.5946321 11.2096529,26.5946321 L28.6616027,26.5946321 C28.9804133,26.5946321 29.2388604,26.3262762 29.2388604,26.0161134 C29.2388604,25.6966064 28.9758336,25.4375948 28.6616027,25.4375948 L11.2096529,25.4375948 C10.8908423,25.4375948 10.6323953,25.7059506 10.6323953,26.0161134 Z M10.6323953,19.5785186 C10.6323953,19.8980257 10.8954221,20.1570373 11.2096529,20.1570373 L28.6616027,20.1570373 C28.9804133,20.1570373 29.2388604,19.8886815 29.2388604,19.5785186 C29.2388604,19.2590116 28.9758336,19 28.6616027,19 L11.2096529,19 C10.8908423,19 10.6323953,19.2683558 10.6323953,19.5785186 Z M10.6323953,13.0161134 C10.6323953,13.3356204 10.8954221,13.5946321 11.2096529,13.5946321 L28.6616027,13.5946321 C28.9804133,13.5946321 29.2388604,13.3262762 29.2388604,13.0161134 C29.2388604,12.6966064 28.9758336,12.4375948 28.6616027,12.4375948 L11.2096529,12.4375948 C10.8908423,12.4375948 10.6323953,12.7059506 10.6323953,13.0161134 Z" id="Oval-11" fill="#4C4749" sketch:type="MSShapeGroup"/>
+                </g>
+            </svg>
+            <span>Menu</span>
+        </a>
+
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="/cru-web-styleguide/js/anchor.min.js"></script>
+        <script>
+        $(function() {
+            $(".js-nav-open").click(function(){
+                $("html").toggleClass("is-open--nav");
+            });
+
+            $(".js-overlay").click(function(){
+                $("html").removeClass("is-open--nav");
+            });
+        });
+        </script>
+        <script>
+        var selector = '.markdown-body h2, .markdown-body h3';
+        addAnchors(selector);
+        </script>
+    </body>
 </html>
