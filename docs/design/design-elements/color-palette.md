@@ -10,11 +10,9 @@ This lists the primary and secondary color palettes as described in the Brand Gu
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Cru Colors
-
-#### Primary
+## Primary
 <ul class="listInline  row  palette  pl0">
-    <li class="col-xs-4">
+    <li class="col-xs-12  col-sm-6  col-md-4  col-lg-3">
         <div class="swatch">
             <span class="swatch-preview" style="background-color: #f9b625;"></span>
             <ul class="listBlock swatch-details">
@@ -24,7 +22,7 @@ This lists the primary and secondary color palettes as described in the Brand Gu
             </ul>
         </div>
     </li>
-    <li class="col-xs-4">
+    <li class="col-xs-12  col-sm-6  col-md-4  col-lg-3">
         <div class="swatch">
             <span class="swatch-preview" style="background-color: #666062;"></span>
             <ul class="listBlock swatch-details">
@@ -35,7 +33,7 @@ This lists the primary and secondary color palettes as described in the Brand Gu
         </div>
     </li>
 
-    <li class="col-xs-4">
+    <li class="col-xs-12  col-sm-6  col-md-4  col-lg-3">
         <div class="swatch">
             <span class="swatch-preview" style="background-color: #fff;"></span>
             <ul class="listBlock swatch-details">
@@ -48,9 +46,9 @@ This lists the primary and secondary color palettes as described in the Brand Gu
 </ul>
 
 
-#### Secondary
+## Secondary
 <ul class="listInline  row  palette  pl0  mb">
-    <li class="col-xs-4">
+    <li class="col-xs-12  col-sm-6  col-md-4  col-lg-3">
         <div class="swatch">
             <span class="swatch-preview" style="background-color: #dd7d1b;"></span>
             <ul class="listBlock swatch-details">
@@ -60,7 +58,7 @@ This lists the primary and secondary color palettes as described in the Brand Gu
             </ul>
         </div>
     </li>
-    <li class="col-xs-4">
+    <li class="col-xs-12  col-sm-6  col-md-4  col-lg-3">
         <div class="swatch">
             <span class="swatch-preview" style="background-color: #3eb1c8;"></span>
             <ul class="listBlock swatch-details">
@@ -71,7 +69,7 @@ This lists the primary and secondary color palettes as described in the Brand Gu
         </div>
     </li>
 
-    <li class="col-xs-4">
+    <li class="col-xs-12  col-sm-6  col-md-4  col-lg-3">
         <div class="swatch">
             <span class="swatch-preview" style="background-color: #007398;"></span>
             <ul class="listBlock swatch-details">

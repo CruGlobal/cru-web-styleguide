@@ -16,12 +16,14 @@
 
 //@import "../scss/primer";
 @import "bower_components/octicons/octicons/octicons.css";
-@import "bower_components/primer-user-content/components/markdown";
+// @import "bower_components/primer-user-content/components/markdown";
 @import "css/anchor";
 @import "css/syntax";
 
+@import "scss/markdown";
 @import "bower_components/crubrand/crubrand";
 @import "_settings.scss";
+
 
 $enable-margins:          true;
 $enable-margins--tiny:    true;
@@ -37,6 +39,7 @@ $enable-paddings--small:  true;
 $enable-paddings--large:  true;
 $enable-paddings--huge:   true;
 $enable-paddings--none:   true;
+
 
 .icon--chevronRight,
 %icon--chevronRight {
@@ -60,6 +63,10 @@ body {
   .is-open--nav & {
       overflow: hidden;
   }
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+    font-weight: normal;
 }
 
 .container {
@@ -287,6 +294,7 @@ body {
 
 .swatch {
     background-color: #f9f9f9;
+    margin-bottom: $base-spacing-unit;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 2px;
@@ -391,4 +399,76 @@ body {
         left: 48px;
         color: $colorCru-gray;
     }
+}
+
+
+#markdown-toc {
+    list-style: none;
+    padding-left: 15px;
+    counter-reset: list;
+    margin-bottom: 4em;
+
+    li {
+        padding-left: $base-spacing-unit;
+        position: relative;
+    }
+
+    li a {
+        display: inline-block;
+
+        &:before {
+            counter-increment: list;
+            content: "0" counter(list);
+            color: inherit;
+            font-weight: 400;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: auto;
+        }
+    }
+
+    > li > ul {
+        list-style: none;
+        padding-left: 0;
+        counter-reset: list;
+
+        li {
+            padding-left: 22px;
+        }
+
+        a:before{
+            content: counter(list, lower-alpha) ".";
+        }
+    }
+}
+
+
+.anchor-link {
+    float: none;
+    margin-left: em(8px);
+}
+
+.styleguide-icon {
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.icon--cruGlobal {
+        display: block;
+        max-width: none;
+        padding-top: 0;
+    }
+}
+
+.icon-name {
+    text-align: center;
+}
+
+
+.styleguide-intro {
+     margin-top: em(4px);
+     margin-bottom: em(8px);
 }
