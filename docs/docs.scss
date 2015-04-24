@@ -251,6 +251,8 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+
+    @include font-size(12px);
 }
 
 .card-link {
@@ -427,6 +429,11 @@ body {
             left: 0;
             right: auto;
         }
+    }
+
+    li:nth-child(10n) a:before,
+    li:nth-child(10n)~li a:before {
+        content: counter(list);
     }
 
     > li > ul {

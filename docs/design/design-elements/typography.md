@@ -1,9 +1,8 @@
 ---
 layout: page
 title: Typography
+excerpt: Typography Stuff
 ---
-
-This lists the primary and secondary color palettes as described in the Brand Guidelines PDF and in [_colors.scss](https://github.com/CruGlobal/crubrand/blob/master/variables/_colors.scss).
 
 ## Contents
 
