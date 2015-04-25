@@ -1,6 +1,6 @@
 {
   "name": "crubrand",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "homepage": "https://github.com/CruGlobal/crubrand",
   "authors": [
     "Elikem Adadevoh <elikem@gmail.com>"
@@ -24,13 +24,13 @@
   "dependencies": {
     "bootstrap-sass-official": "3.3.1"
   },
-  "_release": "1.0.0",
+  "_release": "1.2.0",
   "_resolution": {
     "type": "version",
-    "tag": "1.0.0",
-    "commit": "b7703f43d3eabcc874fce5e4492956f98c7661dc"
+    "tag": "1.2.0",
+    "commit": "5ff45a9040a320bdc33a0a57de522e242246314d"
   },
   "_source": "git://github.com/CruGlobal/crubrand.git",
-  "_target": "*",
+  "_target": "1.2.0",
   "_originalSource": "crubrand"
 }
