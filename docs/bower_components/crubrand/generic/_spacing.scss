@@ -3,28 +3,10 @@
 \*------------------------------------*/
 
 /**
- * Margin and padding helper classes. 
+ * Margin and padding helper classes.
  *
  * `.(m|p)(t|r|b|L|e|s)(-|+|0) {}` = margin/padding top/right/bottom/left/ends/sides less/more/none
  */
-
-$base-margin:             $base-line-height !default;
-$base-padding:            $base-line-height !default;
-
-$enable-margins:          false !default;
-$enable-margins--tiny:    false !default;
-$enable-margins--small:   false !default;
-$enable-margins--large:   false !default;
-$enable-margins--huge:    false !default;
-$enable-margins--none:    false !default;
-
-
-$enable-paddings:         false !default;
-$enable-paddings--tiny:   false !default;
-$enable-paddings--small:  false !default;
-$enable-paddings--large:  false !default;
-$enable-paddings--huge:   false !default;
-$enable-paddings--none:   false !default;
 
 // scss-lint:disable SingleLinePerProperty SingleLinePerSelector SpaceBeforeBrace
 
@@ -32,7 +14,7 @@ $enable-paddings--none:   false !default;
 
     /**
      * Add margins.
-     */	
+     */
     .m,  %m   { margin:        $base-margin !important; }
     .mt, %mt  { margin-top:    $base-margin !important; }
     .mr, %mr  { margin-right:  $base-margin !important; }
@@ -40,12 +22,12 @@ $enable-paddings--none:   false !default;
     .ml, %ml  { margin-left:   $base-margin !important; }
     .me, %me  { margin-top:    $base-margin !important; margin-bottom: $base-margin !important; }
     .ms, %ms  { margin-right:  $base-margin !important; margin-left:   $base-margin !important; }
-	
+
 }
 
 
 @if ($enable-margins--tiny == true) {
-	
+
     /**
      * Tiny margins.
      */
@@ -60,7 +42,7 @@ $enable-paddings--none:   false !default;
 
 
 @if ($enable-margins--small == true) {
-	
+
     /**
     * Small margins.
     */
@@ -71,12 +53,12 @@ $enable-paddings--none:   false !default;
     .ml-, %ml-  { margin-left:   half($base-margin) !important; }
     .me-, %me-  { margin-top:    half($base-margin) !important; margin-bottom: half($base-margin) !important; }
     .ms-, %ms-  { margin-right:  half($base-margin) !important; margin-left:   half($base-margin) !important; }
-	
+
 }
 
 
 @if ($enable-margins--large == true) {
-	
+
     /**
      * Large Margins.
      */
@@ -91,7 +73,7 @@ $enable-paddings--none:   false !default;
 
 
 @if ($enable-margins--huge == true) {
-	
+
     /**
      * Huge Margins.
      */
@@ -102,12 +84,12 @@ $enable-paddings--none:   false !default;
     .ml_xx, %ml_xx  { margin-left:   quadruple($base-margin) !important;  }
     .ms_xx, %ms_xx  { margin-top:    quadruple($base-margin) !important; margin-bottom: quadruple($base-margin) !important; }
     .me_xx, %me_xx  { margin-right:  quadruple($base-margin) !important; margin-left:   quadruple($base-margin) !important; }
-	
+
 }
 
 
 @if ($enable-margins--none == true) {
-	
+
     /**
      * Remove margins.
      */
@@ -126,7 +108,7 @@ $enable-paddings--none:   false !default;
 
 
 @if ($enable-paddings == true) {
-	
+
     /**
      * Add paddings.
      */
@@ -137,11 +119,11 @@ $enable-paddings--none:   false !default;
     .pl, %pl  { padding-left:   $base-padding !important; }
     .pe, %pe  { padding-top:    $base-padding !important; padding-bottom: $base-padding !important; }
     .ps, %ps  { padding-right:  $base-padding !important; padding-left:   $base-padding !important; }
-	
+
 }
 
 @if ($enable-paddings--tiny == true) {
-	
+
 	/**
      * Tiny paddings.
      */
@@ -152,11 +134,11 @@ $enable-paddings--none:   false !default;
     .pl--, %pl--  { padding-left:   quarter($base-padding) !important; }
     .pe--, %pe--  { padding-top:    quarter($base-padding) !important; padding-bottom: quarter($base-padding) !important; }
     .ps--, %ps--  { padding-right:  quarter($base-padding) !important; padding-left:   quarter($base-padding) !important; }
-	
+
 }
 
 @if ($enable-paddings--small == true) {
-	
+
     /**
      * Small paddings.
      */
@@ -167,11 +149,11 @@ $enable-paddings--none:   false !default;
     .pl-, %pl-  { padding-left:   half($base-padding) !important; }
     .pe-, %pe-  { padding-top:    half($base-padding) !important; padding-bottom: half($base-padding) !important; }
     .ps-, %ps-  { padding-right:  half($base-padding) !important; padding-left:   half($base-padding) !important; }
-	
+
 }
 
 @if ($enable-paddings--large == true) {
-	
+
     /**
      * Large paddings.
      */
@@ -182,11 +164,11 @@ $enable-paddings--none:   false !default;
     .pl_x, %pl_x  { padding-left:   double($base-padding) !important; }
     .pe_x, %pe_x  { padding-top:    double($base-padding) !important; padding-bottom: double($base-padding) !important; }
     .ps_x, %ps_x  { padding-right:  double($base-padding) !important; padding-left:   double($base-padding) !important; }
-	
+
 }
 
 @if ($enable-paddings--huge == true) {
-	
+
     /**
      * Huge paddings.
      */
@@ -197,11 +179,11 @@ $enable-paddings--none:   false !default;
     .pl_xx, %pl_xx  { padding-left:   quadruple($base-padding) !important; }
     .pe_xx, %pe_xx  { padding-top:    quadruple($base-padding) !important; padding-bottom: quadruple($base-padding) !important; }
     .ps_xx, %ps_xx  { padding-right:  quadruple($base-padding) !important; padding-left:   quadruple($base-padding) !important; }
-	
+
 }
 
 @if ($enable-paddings--none == true) {
-	
+
     /**
      * Remove paddings.
      */
@@ -212,7 +194,7 @@ $enable-paddings--none:   false !default;
     .pl0,  %pl0  { padding-left:   0 !important; }
     .pe0,  %pe0  { padding-top:    0 !important; padding-bottom: 0 !important; }
     .ps0,  %ps0  { padding-right:  0 !important; padding-left:   0 !important; }
-	
+
 }
 
 // scss-lint:enable SingleLinePerProperty SingleLinePerSelector SpaceBeforeBrace
