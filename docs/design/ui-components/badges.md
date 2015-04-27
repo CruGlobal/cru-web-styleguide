@@ -1,5 +1,24 @@
 ---
 layout: page
 title: Badges
-excerpt: This lists the primary and secondary color palettes as described in the Brand Guidelines PDF and in <a href="https://github.com/CruGlobal/crubrand/blob/master/variables/_colors.scss">_colors.scss</a>.
 ---
+
+## Contents
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+## Default
+
+{% example html %}
+<a href="#">Inbox <span class="badge">42</span></a>
+{% endexample %}
+
+
+## Active States
+
+{% example html %}
+<button class="btn btn-primary" type="button">
+  Messages <span class="badge">4</span>
+</button>
+{% endexample %}

@@ -32,6 +32,16 @@ This lists the ui colors as described in [_colors.scss](https://github.com/CruGl
             </ul>
         </div>
     </li>
+    <li class="col-xs-12  col-sm-6  col-md-4  col-lg-3">
+        <div class="swatch">
+            <span class="swatch-preview" style="background-color: #f7f7f7;"></span>
+            <ul class="listBlock swatch-details">
+                <li><strong>Body Background</strong></li>
+                <li>#f7f7f7</li>
+                <li>$color-background</li>
+            </ul>
+        </div>
+    </li>
 </ul>
 
 ## Highlights
@@ -79,3 +89,5 @@ This lists the ui colors as described in [_colors.scss](https://github.com/CruGl
         </div>
     </li>
 </ul>
+
+## Social Media
