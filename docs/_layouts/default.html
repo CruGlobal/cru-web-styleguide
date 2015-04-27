@@ -38,22 +38,66 @@
         </hgroup>
 
         <nav class="navigation">
-          <a class="navigation-link{% if page.layout == "page" %}  active{% endif %}" href="{{ site.baseurl }}/overview">Overview</a>
-          <a class="navigation-link{% if page.title == "About" %}  active{% endif %}" href="{{ site.baseurl }}/about">About</a>
+          <a class="navigation-link{% if page.layout == "page-styleguide" %}  active{% endif %}" href="{{ site.baseurl }}/styleguide/design-elements/color-palette">Style Guide</a>
+          <a class="navigation-link{% if page.layout == "page-documentation" %}  active{% endif %}" href="{{ site.baseurl }}/documentation/general/principles">Documentation</a>
+          <a class="navigation-link{% if page.title == "page-performance" %}  active{% endif %}" href="{{ site.baseurl }}/performance/css">Performance</a>
           <a class="navigation-link" href="https://github.com/CruGlobal/crubrand" target="_blank">View on Github</a>
         </nav>
     </header>
 
     <header class="subHeader">
         <div class="container">
-            <h2 class="subHeader-title  u-floatLeft  h4">Test Title</h2>
+            <h2 class="subHeader-title  u-floatLeft  h4">
+                {% if page.type == "page-styleguide-design" %}
+                    Design Elements
+                {% endif %}
+                {% if page.type == "page-styleguide-components" %}
+                    UI Components
+                {% endif %}
+                {% if page.type == "page-documentation-general" %}
+                    General Principles
+                {% endif %}
+                {% if page.type == "page-documentation-css" %}
+                    CSS
+                {% endif %}
+                {% if page.type == "page-documentation-js" %}
+                    JS
+                {% endif %}
+                {% if page.type == "page-documentation-icons" %}
+                    Icons
+                {% endif %}
+                {% if page.type == "page-documentation-git" %}
+                    Git
+                {% endif %}
+                </h2>
             <ul class="listInline  u-floatRight  subNav">
+                {% if page.type == "page-styleguide-design" or  page.type == "page-styleguide-components" %}
                 <li>
-                    <a href="" class="secondaryNav-link  is-active  u-linkClean">Design Elements</a>
+                    <a href="{{ site.baseurl }}/styleguide/design-elements/color-palette" class="secondaryNav-link  u-linkClean {% if page.type == "page-styleguide-design" %} is-active{% endif %}">Design Elements</a>
                 </li>
                 <li>
-                    <a href="" class="secondaryNav-link  u-linkClean">UI Elements</a>
+                    <a href="{{ site.baseurl }}/styleguide/ui-components/alerts" class="secondaryNav-link  u-linkClean {% if page.type == "page-styleguide-components" %} is-active{% endif %}">UI Components</a>
                 </li>
+                {% endif %}
+
+                {% if page.type == "page-documentation-general" or page.type == "page-documentation-git" or page.type == "page-documentation-css" or page.type == "page-documentation-js" or page.type == "page-documentation-layouts"  %}
+                <li>
+                    <a href="{{ site.baseurl }}/documentation/general/principles" class="secondaryNav-link  u-linkClean {% if page.type == "page-styleguide-general" %} is-active{% endif %}">General Principles</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/documentation/css/" class="secondaryNav-link  u-linkClean {% if page.type == "page-styleguide-css" %} is-active{% endif %}">CSS</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/documentation/js/" class="secondaryNav-link  u-linkClean {% if page.type == "page-styleguide-git" %} is-active{% endif %}">JS</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/styleguide/icons/" class="secondaryNav-link  u-linkClean {% if page.type == "page-styleguide-git" %} is-active{% endif %}">Icons</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/styleguide/git/" class="secondaryNav-link  u-linkClean {% if page.type == "page-styleguide-git" %} is-active{% endif %}">Git</a>
+                </li>
+                {% endif %}
+
             </ul>
         </div>
     </header>
