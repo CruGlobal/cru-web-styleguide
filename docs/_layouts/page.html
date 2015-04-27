@@ -4,9 +4,27 @@ layout: default
 
 <div class="row docs-layout">
     <div class="pageNav--left">
-    {% unless page.title == "About" %}
-    {% include sidenav.html %}
-    {% endunless %}
+        {% if page.type == "page-styleguide-design" %}
+            {% include sidenav-design.html %}
+        {% endif %}
+        {% if page.type == "page-styleguide-components" %}
+            {% include sidenav-components.html %}
+        {% endif %}
+        {% if page.type == "page-documentation-general" %}
+            {% include sidenav-general.html %}
+        {% endif %}
+        {% if page.type == "page-documentation-css" %}
+            {% include sidenav-css.html %}
+        {% endif %}
+        {% if page.type == "page-documentation-js" %}
+            {% include sidenav-js.html %}
+        {% endif %}
+        {% if page.type == "page-documentation-layouts" %}
+            {% include sidenav-layouts.html %}
+        {% endif %}
+        {% if page.type == "page-documentation-git" %}
+            {% include sidenav-git.html %}
+        {% endif %}
     </div>
 
     <div class="pageContent markdown-body">
