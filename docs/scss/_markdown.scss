@@ -262,6 +262,7 @@ $base-spacing-unit: 29px;
 
   // Headings
   h1, h2, h3, h4, h5, h6 {
+      font-weight: normal;
     &:hover .anchor {
 
       .octicon-link {
@@ -275,13 +276,14 @@ $base-spacing-unit: 29px;
     }
   }
 
-  > h2 {
-      margin-bottom: round($base-spacing-unit / 2);
+    > h2 {
+        margin-bottom: round($base-spacing-unit / 2);
 
-      font-size: 1em;
-      color: rgba(0,0,0,0.44);
-      text-transform: uppercase;
-  }
+        text-transform: uppercase;
+        color: $colorText--muted;
+        font-weight: bold;
+        @include font-size(12px);
+    }
 
   .highlight + h2 {
       margin-top: 5em;

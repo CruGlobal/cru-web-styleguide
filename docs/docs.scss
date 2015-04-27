@@ -20,26 +20,9 @@
 @import "css/anchor";
 @import "css/syntax";
 
-@import "scss/markdown";
+@import "docs-settings";
 @import "bower_components/crubrand/crubrand";
-@import "_settings.scss";
-
-
-$enable-margins:          true;
-$enable-margins--tiny:    true;
-$enable-margins--small:   true;
-$enable-margins--large:   true;
-$enable-margins--huge:    true;
-$enable-margins--none:    true;
-
-
-$enable-paddings:         true;
-$enable-paddings--tiny:   true;
-$enable-paddings--small:  true;
-$enable-paddings--large:  true;
-$enable-paddings--huge:   true;
-$enable-paddings--none:   true;
-
+@import "scss/markdown";
 
 .icon--chevronRight,
 %icon--chevronRight {
@@ -63,10 +46,6 @@ body {
   .is-open--nav & {
       overflow: hidden;
   }
-}
-
-.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
-    font-weight: normal;
 }
 
 .container {
@@ -252,6 +231,8 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    margin-bottom: 0;
+    color: $colorText--muted;
 
     @include font-size(12px);
 }
