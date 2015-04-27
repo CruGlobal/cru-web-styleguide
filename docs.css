@@ -6,354 +6,6 @@
  * Released under MIT license. Copyright 2015 GitHub, Inc.
  */
 @import url(bower_components/octicons/octicons/octicons.css);
-.markdown-body {
-  overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  word-wrap: break-word;
-}
-.markdown-body > *:first-child {
-  margin-top: 0 !important;
-}
-.markdown-body > *:last-child {
-  margin-bottom: 0 !important;
-}
-.markdown-body a:not([href]) {
-  color: inherit;
-  text-decoration: none;
-}
-.markdown-body .absent {
-  color: #c00;
-}
-.markdown-body .anchor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  padding-right: 6px;
-  padding-left: 30px;
-  margin-left: -30px;
-}
-.markdown-body .anchor:focus {
-  outline: none;
-}
-.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
-  position: relative;
-  margin-top: 1em;
-  margin-bottom: 16px;
-  font-weight: bold;
-  line-height: 1.4;
-}
-.markdown-body h1 .octicon-link, .markdown-body h2 .octicon-link, .markdown-body h3 .octicon-link, .markdown-body h4 .octicon-link, .markdown-body h5 .octicon-link, .markdown-body h6 .octicon-link {
-  display: none;
-  color: #000;
-  vertical-align: middle;
-}
-.markdown-body h1:hover .anchor, .markdown-body h2:hover .anchor, .markdown-body h3:hover .anchor, .markdown-body h4:hover .anchor, .markdown-body h5:hover .anchor, .markdown-body h6:hover .anchor {
-  padding-left: 8px;
-  margin-left: -30px;
-  text-decoration: none;
-}
-.markdown-body h1:hover .anchor .octicon-link, .markdown-body h2:hover .anchor .octicon-link, .markdown-body h3:hover .anchor .octicon-link, .markdown-body h4:hover .anchor .octicon-link, .markdown-body h5:hover .anchor .octicon-link, .markdown-body h6:hover .anchor .octicon-link {
-  display: inline-block;
-}
-.markdown-body h1 tt,
-.markdown-body h1 code, .markdown-body h2 tt,
-.markdown-body h2 code, .markdown-body h3 tt,
-.markdown-body h3 code, .markdown-body h4 tt,
-.markdown-body h4 code, .markdown-body h5 tt,
-.markdown-body h5 code, .markdown-body h6 tt,
-.markdown-body h6 code {
-  font-size: inherit;
-}
-.markdown-body h1 {
-  padding-bottom: 0.3em;
-  font-size: 2.25em;
-  line-height: 1.2;
-  border-bottom: 1px solid #eee;
-}
-.markdown-body h1 .anchor {
-  line-height: 1;
-}
-.markdown-body h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.75em;
-  line-height: 1.225;
-  border-bottom: 1px solid #eee;
-}
-.markdown-body h2 .anchor {
-  line-height: 1;
-}
-.markdown-body h3 {
-  font-size: 1.5em;
-  line-height: 1.43;
-}
-.markdown-body h3 .anchor {
-  line-height: 1.2;
-}
-.markdown-body h4 {
-  font-size: 1.25em;
-}
-.markdown-body h4 .anchor {
-  line-height: 1.2;
-}
-.markdown-body h5 {
-  font-size: 1em;
-}
-.markdown-body h5 .anchor {
-  line-height: 1.1;
-}
-.markdown-body h6 {
-  font-size: 1em;
-  color: #777;
-}
-.markdown-body h6 .anchor {
-  line-height: 1.1;
-}
-.markdown-body p,
-.markdown-body blockquote,
-.markdown-body ul, .markdown-body ol, .markdown-body dl,
-.markdown-body table,
-.markdown-body pre {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-.markdown-body hr {
-  height: 4px;
-  padding: 0;
-  margin: 16px 0;
-  background-color: #e7e7e7;
-  border: 0 none;
-}
-.markdown-body ul,
-.markdown-body ol {
-  padding-left: 2em;
-}
-.markdown-body ul.no-list,
-.markdown-body ol.no-list {
-  padding: 0;
-  list-style-type: none;
-}
-.markdown-body ul ul,
-.markdown-body ul ol,
-.markdown-body ol ol,
-.markdown-body ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.markdown-body li > p {
-  margin-top: 16px;
-}
-.markdown-body dl {
-  padding: 0;
-}
-.markdown-body dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: bold;
-}
-.markdown-body dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-.markdown-body blockquote {
-  padding: 0 15px;
-  color: #777;
-  border-left: 4px solid #ddd;
-}
-.markdown-body blockquote > :first-child {
-  margin-top: 0;
-}
-.markdown-body blockquote > :last-child {
-  margin-bottom: 0;
-}
-.markdown-body table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: normal;
-  word-break: keep-all;
-}
-.markdown-body table th {
-  font-weight: bold;
-}
-.markdown-body table th, .markdown-body table td {
-  padding: 6px 13px;
-  border: 1px solid #ddd;
-}
-.markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-}
-.markdown-body table tr:nth-child(2n) {
-  background-color: #f8f8f8;
-}
-.markdown-body img {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-.markdown-body .emoji {
-  max-width: none;
-}
-.markdown-body span.frame {
-  display: block;
-  overflow: hidden;
-}
-.markdown-body span.frame > span {
-  display: block;
-  float: left;
-  width: auto;
-  padding: 7px;
-  margin: 13px 0 0;
-  overflow: hidden;
-  border: 1px solid #ddd;
-}
-.markdown-body span.frame span img {
-  display: block;
-  float: left;
-}
-.markdown-body span.frame span span {
-  display: block;
-  padding: 5px 0 0;
-  clear: both;
-  color: #333;
-}
-.markdown-body span.align-center {
-  display: block;
-  overflow: hidden;
-  clear: both;
-}
-.markdown-body span.align-center > span {
-  display: block;
-  margin: 13px auto 0;
-  overflow: hidden;
-  text-align: center;
-}
-.markdown-body span.align-center span img {
-  margin: 0 auto;
-  text-align: center;
-}
-.markdown-body span.align-right {
-  display: block;
-  overflow: hidden;
-  clear: both;
-}
-.markdown-body span.align-right > span {
-  display: block;
-  margin: 13px 0 0;
-  overflow: hidden;
-  text-align: right;
-}
-.markdown-body span.align-right span img {
-  margin: 0;
-  text-align: right;
-}
-.markdown-body span.float-left {
-  display: block;
-  float: left;
-  margin-right: 13px;
-  overflow: hidden;
-}
-.markdown-body span.float-left span {
-  margin: 13px 0 0;
-}
-.markdown-body span.float-right {
-  display: block;
-  float: right;
-  margin-left: 13px;
-  overflow: hidden;
-}
-.markdown-body span.float-right > span {
-  display: block;
-  margin: 13px auto 0;
-  overflow: hidden;
-  text-align: right;
-}
-.markdown-body code,
-.markdown-body tt {
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(0, 0, 0, 0.04);
-  border-radius: 3px;
-}
-.markdown-body code:before, .markdown-body code:after,
-.markdown-body tt:before,
-.markdown-body tt:after {
-  letter-spacing: -0.2em;
-  content: "\00a0";
-}
-.markdown-body code br,
-.markdown-body tt br {
-  display: none;
-}
-.markdown-body del code {
-  text-decoration: inherit;
-}
-.markdown-body pre > code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-.markdown-body .highlight {
-  margin-bottom: 16px;
-}
-.markdown-body .highlight pre,
-.markdown-body pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f7f7f7;
-  border-radius: 3px;
-}
-.markdown-body .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
-}
-.markdown-body pre {
-  word-wrap: normal;
-}
-.markdown-body pre code,
-.markdown-body pre tt {
-  display: inline;
-  max-width: initial;
-  padding: 0;
-  margin: 0;
-  overflow: initial;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
-}
-.markdown-body pre code:before, .markdown-body pre code:after,
-.markdown-body pre tt:before,
-.markdown-body pre tt:after {
-  content: normal;
-}
-.markdown-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
-}
-
 /**
  * Store the link icon as a base64 embedded icon font.
  */
@@ -726,6 +378,9 @@
 }
 
 /*------------------------------------*\
+    #SETTINGS
+\*------------------------------------*/
+/*------------------------------------*\
     CRUBRAND
 \*------------------------------------*/
 /**
@@ -858,13 +513,24 @@
  * Cru Colors
  */
 /**
- * Helpers
+ * Type
+ */
+/**
+ * Hightlight
  */
 /**
  * Grayscale
+ *
+ * Light --> Dark
+ */
+/**
+ * Social Media
  */
 /**
  * Framework
+ */
+/**
+ * #USAGE
  */
 /*------------------------------------*\
     #VARIABLES/BUTTONS
@@ -881,12 +547,12 @@
 /*------------------------------------*\
     #VARIABLES/BOX-SHADOWS
 \*------------------------------------*/
-/*------------------------------------*\
-    #VARIABLES/COLORS
-\*------------------------------------*/
 /**
  * For use in calculations
  */
+/*------------------------------------*\
+    #VARIABLES/COLORS
+\*------------------------------------*/
 /*------------------------------------*\
  #MIXINS/TYPE
 \*------------------------------------*/
@@ -5794,10 +5460,10 @@ a.label:hover, a.label:focus {
 }
 
 .label-info {
-  background-color: #5bc0de;
+  background-color: #ddf1f5;
 }
 .label-info[href]:hover, .label-info[href]:focus {
-  background-color: #31b0d5;
+  background-color: #b5e1ea;
 }
 
 .label-warning {
@@ -6065,7 +5731,7 @@ a.thumbnail.active {
 }
 
 .progress-bar-info {
-  background-color: #5bc0de;
+  background-color: #ddf1f5;
 }
 .progress-striped .progress-bar-info {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6318,7 +5984,6 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 18px;
   color: inherit;
 }
 .panel-title > a {
@@ -7053,7 +6718,7 @@ button.close {
 
 /**
  * This is to override bootstraps specifity of pagiation. Normally this
- * level of nesting would not be allowed. 
+ * level of nesting would not be allowed.
  */
 .pagination-secondary li a {
   color: #fff;
@@ -7075,6 +6740,28 @@ button.close {
 .pagination-secondary li a .badge {
   color: #666062;
   background-color: #fff;
+}
+
+.pagination-subtle li a {
+  color: #6d6e71;
+  background-color: #f4f4f4;
+  border-color: #e7e7e7;
+}
+.pagination-subtle li a:hover, .pagination-subtle li a:focus, .pagination-subtle li a.focus, .pagination-subtle li a:active, .pagination-subtle li a.active, .open > .pagination-subtle li a.dropdown-toggle {
+  color: #6d6e71;
+  background-color: #dbdbdb;
+  border-color: #c8c8c8;
+}
+.pagination-subtle li a:active, .pagination-subtle li a.active, .open > .pagination-subtle li a.dropdown-toggle {
+  background-image: none;
+}
+.pagination-subtle li a.disabled, .pagination-subtle li a.disabled:hover, .pagination-subtle li a.disabled:focus, .pagination-subtle li a.disabled.focus, .pagination-subtle li a.disabled:active, .pagination-subtle li a.disabled.active, .pagination-subtle li a[disabled], .pagination-subtle li a[disabled]:hover, .pagination-subtle li a[disabled]:focus, .pagination-subtle li a[disabled].focus, .pagination-subtle li a[disabled]:active, .pagination-subtle li a[disabled].active, fieldset[disabled] .pagination-subtle li a, fieldset[disabled] .pagination-subtle li a:hover, fieldset[disabled] .pagination-subtle li a:focus, fieldset[disabled] .pagination-subtle li a.focus, fieldset[disabled] .pagination-subtle li a:active, fieldset[disabled] .pagination-subtle li a.active {
+  background-color: #f4f4f4;
+  border-color: #e7e7e7;
+}
+.pagination-subtle li a .badge {
+  color: #f4f4f4;
+  background-color: #6d6e71;
 }
 
 .pagination__prev {
@@ -8422,7 +8109,7 @@ button.close {
     #SPACING
 \*------------------------------------*/
 /**
- * Margin and padding helper classes. 
+ * Margin and padding helper classes.
  *
  * `.(m|p)(t|r|b|L|e|s)(-|+|0) {}` = margin/padding top/right/bottom/left/ends/sides less/more/none
  */
@@ -8523,72 +8210,6 @@ button.close {
 .ms- {
   margin-right: 15px !important;
   margin-left: 15px !important;
-}
-
-/**
- * Large Margins.
- */
-.m_x {
-  margin: 58px !important;
-}
-
-.mt_x {
-  margin-top: 58px !important;
-}
-
-.mr_x {
-  margin-right: 58px !important;
-}
-
-.mb_x {
-  margin-bottom: 58px !important;
-}
-
-.ml_x {
-  margin-left: 58px !important;
-}
-
-.me_x {
-  margin-top: 58px !important;
-  margin-bottom: 58px !important;
-}
-
-.ms_x {
-  margin-right: 58px !important;
-  margin-left: 58px !important;
-}
-
-/**
- * Huge Margins.
- */
-.m_xx {
-  margin: 116px !important;
-}
-
-.mt_xx {
-  margin-top: 116px !important;
-}
-
-.mr_xx {
-  margin-right: 116px !important;
-}
-
-.mb_xx {
-  margin-bottom: 116px !important;
-}
-
-.ml_xx {
-  margin-left: 116px !important;
-}
-
-.ms_xx {
-  margin-top: 116px !important;
-  margin-bottom: 116px !important;
-}
-
-.me_xx {
-  margin-right: 116px !important;
-  margin-left: 116px !important;
 }
 
 /**
@@ -8724,72 +8345,6 @@ button.close {
 }
 
 /**
- * Large paddings.
- */
-.p_x {
-  padding: 58px !important;
-}
-
-.pt_x {
-  padding-top: 58px !important;
-}
-
-.pr_x {
-  padding-right: 58px !important;
-}
-
-.pb_x {
-  padding-bottom: 58px !important;
-}
-
-.pl_x {
-  padding-left: 58px !important;
-}
-
-.pe_x {
-  padding-top: 58px !important;
-  padding-bottom: 58px !important;
-}
-
-.ps_x {
-  padding-right: 58px !important;
-  padding-left: 58px !important;
-}
-
-/**
- * Huge paddings.
- */
-.p_xx {
-  padding: 116px !important;
-}
-
-.pt_xx {
-  padding-top: 116px !important;
-}
-
-.pr_xx {
-  padding-right: 116px !important;
-}
-
-.pb_xx {
-  padding-bottom: 116px !important;
-}
-
-.pl_xx {
-  padding-left: 116px !important;
-}
-
-.pe_xx {
-  padding-top: 116px !important;
-  padding-bottom: 116px !important;
-}
-
-.ps_xx {
-  padding-right: 116px !important;
-  padding-left: 116px !important;
-}
-
-/**
  * Remove paddings.
  */
 .p0 {
@@ -8820,6 +8375,274 @@ button.close {
 .ps0 {
   padding-right: 0 !important;
   padding-left: 0 !important;
+}
+
+.markdown-body > *:first-child {
+  margin-top: 0 !important;
+}
+.markdown-body > *:last-child {
+  margin-bottom: 0 !important;
+}
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  font-weight: normal;
+}
+.markdown-body h1:hover .anchor .octicon-link, .markdown-body h2:hover .anchor .octicon-link, .markdown-body h3:hover .anchor .octicon-link, .markdown-body h4:hover .anchor .octicon-link, .markdown-body h5:hover .anchor .octicon-link, .markdown-body h6:hover .anchor .octicon-link {
+  display: inline-block;
+}
+.markdown-body h1 tt,
+.markdown-body h1 code, .markdown-body h2 tt,
+.markdown-body h2 code, .markdown-body h3 tt,
+.markdown-body h3 code, .markdown-body h4 tt,
+.markdown-body h4 code, .markdown-body h5 tt,
+.markdown-body h5 code, .markdown-body h6 tt,
+.markdown-body h6 code {
+  font-size: inherit;
+}
+.markdown-body > h2 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #67747c;
+  font-weight: bold;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2.41667;
+}
+.markdown-body .highlight + h2 {
+  margin-top: 5em;
+}
+.markdown-body > p:first-child {
+  margin-bottom: 3em;
+}
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul, .markdown-body ol, .markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-body li > p {
+  margin-top: 16px;
+}
+.markdown-body dl {
+  padding: 0;
+}
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+.markdown-body table th {
+  font-weight: bold;
+}
+.markdown-body table th, .markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.markdown-body .emoji {
+  max-width: none;
+}
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+.markdown-body span.frame > span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: #333;
+}
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.markdown-body span.align-center > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.markdown-body span.align-right > span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+.markdown-body span.float-right > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+.markdown-body code,
+.markdown-body tt {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+}
+.markdown-body code:before, .markdown-body code:after,
+.markdown-body tt:before,
+.markdown-body tt:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
+}
+.markdown-body del code {
+  text-decoration: inherit;
+}
+.markdown-body pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+.markdown-body pre {
+  word-wrap: normal;
+}
+.markdown-body pre code,
+.markdown-body pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.markdown-body pre code:before, .markdown-body pre code:after,
+.markdown-body pre tt:before,
+.markdown-body pre tt:after {
+  content: normal;
+}
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
 }
 
 .icon--chevronRight,
@@ -8999,11 +8822,17 @@ body {
 .card-title {
   display: block;
   padding: 13px 15px;
+  margin-bottom: 0;
   line-height: 1.3;
   border-bottom: 1px solid #dbe6ec;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  margin-bottom: 0;
+  color: #67747c;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2.41667;
 }
 
 .card-link {
@@ -9015,13 +8844,14 @@ body {
   position: relative;
   border-bottom: 1px solid rgba(219, 230, 236, 0.5);
 }
+.card-link:hover, .card-link.is-active {
+  background-color: #f5f5f5;
+}
 .card-link:hover {
   text-decoration: none;
-  background-color: #fafcfd;
 }
 .card-link.is-active {
   border-left: 2px solid #f9b625;
-  background-color: #fafcfd;
   color: #3b444f;
   padding-left: 13px;
 }
@@ -9042,6 +8872,7 @@ body {
 
 .swatch {
   background-color: #f9f9f9;
+  margin-bottom: 29px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 2px;
@@ -9137,4 +8968,89 @@ body {
   top: 6px;
   left: 48px;
   color: #666062;
+}
+
+#markdown-toc {
+  list-style: none;
+  padding-left: 15px;
+  counter-reset: list;
+  margin-bottom: 4em;
+}
+#markdown-toc li {
+  padding-left: 29px;
+  position: relative;
+}
+#markdown-toc li a {
+  display: inline-block;
+}
+#markdown-toc li a:before {
+  counter-increment: list;
+  content: "0" counter(list);
+  color: inherit;
+  font-weight: 400;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+}
+#markdown-toc li:nth-child(10n) a:before,
+#markdown-toc li:nth-child(10n) ~ li a:before {
+  content: counter(list);
+}
+#markdown-toc > li > ul {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: list;
+}
+#markdown-toc > li > ul li {
+  padding-left: 22px;
+}
+#markdown-toc > li > ul a:before {
+  content: counter(list,lower-alpha) ".";
+}
+
+.styleguide-anchor {
+  z-index: 1;
+  height: 30px;
+  width: 30px;
+  display: block;
+  position: absolute;
+  right: -68px;
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.icon--anchor {
+  background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232%22%20height%3D%22232%22%20viewBox%3D%220%200%2032%20232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M28.55%20127.793l-3.844-3.845c-.612-.613-1.424-.948-2.29-.948-.865%200-1.675.335-2.288.948l-5.707%205.707c-1.26%201.263-1.26%203.316%200%204.578l.73.724-.69.688-.72-.725c-.61-.612-1.42-.947-2.29-.947s-1.67.335-2.29.947l-5.7%205.707c-.61.614-.95%201.424-.95%202.29%200%20.864.34%201.68.95%202.288l3.84%203.845c.61.618%201.43.95%202.29.95s1.68-.332%202.29-.95l5.71-5.7c1.26-1.262%201.26-3.314%200-4.58l-.64-.636.69-.685.64.63c.61.61%201.43.95%202.29.95.87%200%201.68-.34%202.29-.95l5.71-5.71c.62-.61.95-1.42.95-2.29%200-.86-.33-1.67-.95-2.29zm-13.1%2013.103c.088.09.088.23%200%20.316l-5.71%205.708c-.054.055-.114.07-.157.07-.04%200-.103-.015-.157-.07l-3.846-3.842c-.055-.056-.066-.12-.066-.162%200-.04.012-.1.067-.158l5.71-5.708c.06-.055.12-.065.16-.065.04%200%20.11.01.16.065l.73.722-3.58%203.58c-.65.644-.65%201.693%200%202.34l.15.146c.65.646%201.7.646%202.35%200l3.58-3.58.64.638zm10.97-10.656l-5.708%205.708c-.053.054-.116.068-.16.068-.04%200-.102-.014-.157-.068l-.637-.635%203.41-3.406c.643-.65.643-1.696%200-2.342l-.148-.145c-.646-.65-1.694-.65-2.34%200l-3.408%203.406-.72-.722c-.09-.088-.09-.23%200-.32l5.706-5.706c.055-.055.118-.066.16-.066.042%200%20.103.01.157.066l3.846%203.844c.06.056.07.117.07.158%200%20.043-.01.106-.06.16zm0%200%22%20fill%3D%22%23206FAC%22%2F%3E%3Cpath%20d%3D%22M28.55%2087.793l-3.844-3.845c-.612-.613-1.424-.948-2.29-.948-.865%200-1.675.335-2.288.948l-5.707%205.707c-1.26%201.263-1.26%203.316%200%204.578l.73.724-.69.688-.72-.725c-.61-.612-1.42-.947-2.29-.947s-1.67.335-2.29.947l-5.7%205.707c-.61.614-.95%201.424-.95%202.29%200%20.864.34%201.68.95%202.288l3.84%203.845c.61.618%201.43.95%202.29.95s1.68-.332%202.29-.95l5.71-5.7c1.26-1.262%201.26-3.314%200-4.58l-.64-.636.69-.685.64.63c.61.61%201.43.95%202.29.95.87%200%201.68-.34%202.29-.95l5.71-5.71c.62-.61.95-1.42.95-2.29%200-.86-.33-1.67-.95-2.29zm-13.1%2013.103c.088.09.088.23%200%20.316l-5.71%205.708c-.054.055-.114.07-.157.07-.04%200-.103-.015-.157-.07l-3.846-3.842c-.055-.056-.066-.12-.066-.162%200-.04.012-.1.067-.158l5.71-5.708c.06-.055.12-.065.16-.065.04%200%20.11.01.16.065l.73.722-3.58%203.58c-.65.644-.65%201.693%200%202.34l.15.146c.65.646%201.7.646%202.35%200l3.58-3.58.64.638zM26.42%2090.24l-5.708%205.708c-.053.054-.116.068-.16.068-.04%200-.102-.014-.157-.068l-.637-.635%203.41-3.406c.643-.65.643-1.696%200-2.342l-.148-.145c-.646-.65-1.694-.65-2.34%200l-3.408%203.406-.72-.722c-.09-.088-.09-.23%200-.32l5.706-5.706c.055-.055.118-.066.16-.066.042%200%20.103.01.157.066l3.846%203.844c.06.056.07.117.07.158%200%20.043-.01.106-.06.16zm0%200%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M28.55%2047.793l-3.844-3.845c-.612-.613-1.424-.948-2.29-.948-.865%200-1.675.335-2.288.948l-5.707%205.707c-1.26%201.263-1.26%203.316%200%204.578l.73.724-.69.688-.72-.725c-.61-.612-1.42-.947-2.29-.947s-1.67.335-2.29.947l-5.71%205.707c-.61.614-.95%201.424-.95%202.29%200%20.864.34%201.68.95%202.288L7.3%2069.05c.61.62%201.423.95%202.287.95.866%200%201.678-.33%202.29-.95l5.71-5.7c1.26-1.26%201.26-3.312%200-4.58l-.638-.634.68-.685.64.64c.61.61%201.42.95%202.29.95.87%200%201.68-.34%202.29-.95l5.71-5.71c.61-.61.95-1.42.95-2.29%200-.86-.34-1.67-.95-2.28zm-13.1%2013.103c.088.09.088.23%200%20.316L9.74%2066.92c-.054.055-.114.07-.157.07-.04%200-.103-.015-.157-.07L5.58%2063.078c-.055-.056-.066-.12-.066-.162%200-.04.012-.1.067-.158l5.71-5.708c.06-.055.12-.065.16-.065.04%200%20.11.01.16.065l.73.722-3.58%203.58c-.65.644-.65%201.693%200%202.34l.15.146c.65.646%201.7.646%202.35%200l3.58-3.58.64.638zM26.42%2050.24l-5.708%205.708c-.053.054-.116.068-.16.068-.04%200-.102-.014-.157-.068l-.637-.635%203.41-3.406c.643-.65.643-1.696%200-2.342l-.148-.145c-.646-.65-1.694-.65-2.34%200l-3.408%203.406-.72-.722c-.09-.088-.09-.23%200-.32l5.706-5.706c.055-.055.118-.066.16-.066.042%200%20.103.01.157.066l3.846%203.844c.06.056.07.117.07.158%200%20.043-.01.106-.06.16zm0%200%22%20fill%3D%22%2367737B%22%2F%3E%3Cpath%20d%3D%22M28.55%207.793l-3.844-3.845C24.094%203.335%2023.282%203%2022.416%203c-.865%200-1.675.335-2.288.948L14.42%209.655c-1.26%201.263-1.26%203.316%200%204.578l.723.724-.69.688-.72-.725c-.613-.612-1.424-.947-2.29-.947-.864%200-1.675.335-2.288.947l-5.707%205.707c-.613.614-.948%201.424-.948%202.29%200%20.864.335%201.68.948%202.288l3.846%203.846c.61.62%201.423.95%202.287.95.87%200%201.68-.33%202.29-.95l5.71-5.7c1.26-1.26%201.26-3.31%200-4.58l-.63-.63.69-.68.64.64c.61.61%201.43.95%202.29.95.87%200%201.68-.34%202.29-.95l5.71-5.71c.62-.61.95-1.42.95-2.29%200-.86-.33-1.67-.95-2.28zm-13.1%2013.103c.088.09.088.23%200%20.316L9.74%2026.92c-.054.055-.114.07-.157.07-.04%200-.103-.015-.157-.07L5.58%2023.078c-.055-.056-.066-.12-.066-.162%200-.04.012-.1.067-.158l5.71-5.708c.06-.055.12-.065.16-.065.04%200%20.11.01.16.065l.73.722-3.58%203.58c-.65.644-.65%201.693%200%202.34l.15.146c.65.646%201.7.646%202.35%200l3.58-3.58.64.638zM26.42%2010.24l-5.708%205.708c-.053.054-.116.068-.16.068-.04%200-.102-.014-.157-.068l-.637-.635%203.41-3.406c.643-.65.643-1.696%200-2.342l-.148-.145c-.646-.65-1.694-.65-2.34%200l-3.408%203.406-.72-.722c-.09-.088-.09-.23%200-.32l5.706-5.706c.055-.055.118-.066.16-.066.042%200%20.103.01.157.066l3.846%203.844c.06.056.07.117.07.158%200%20.043-.01.106-.06.16zm0%200%22%20fill%3D%22%233A434E%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center;
+  background-position: 0 60%;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  background-size: cover;
+}
+
+.styleguide-icon {
+  height: 100px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.styleguide-icon.icon--cruGlobal {
+  display: block;
+  max-width: none;
+  padding-top: 0;
+}
+
+.icon-name {
+  text-align: center;
+}
+
+.styleguide-intro {
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
 }

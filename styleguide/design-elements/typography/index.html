@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="js">
+<!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      Typography &middot; Cru Styleguide
+    </title>
+    <script>
+/*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+(function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+    grunticon(["/cru-web-styleguide/css/bg/icons.data.svg.css", "/cru-web-styleguide/css/bg/icons.data.png.css", "/cru-web-styleguide/css/bg/icons.fallback.css"]);
+</script>
+<noscript><link href="/cru-web-styleguide/css/bg/icons.fallback.css" rel="stylesheet"></noscript>
+
+    <link rel="stylesheet" href="/cru-web-styleguide/docs.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/cru-web-styleguide/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/cru-web-styleguide/favicon.ico">
+  </head>
+  <body>
+
+    <header class="navbar  navbar-default  siteHeader">
+        <hgroup class="titleGroup  navbar-header">
+            <a href="/cru-web-styleguide/" title="Return to Homepage" class="icon--cruLogo"><h1 class="sr-only">Cru is a caring community passionate about connecting people to Jesus Christ</h1></a>
+        </hgroup>
+
+        <nav class="navigation">
+          <a class="navigation-link" href="/cru-web-styleguide/styleguide/design-elements/color-palette">Style Guide</a>
+          <a class="navigation-link" href="/cru-web-styleguide/documentation/general/principles">Documentation</a>
+          <a class="navigation-link" href="/cru-web-styleguide/performance/css">Performance</a>
+          <a class="navigation-link" href="https://github.com/CruGlobal/crubrand" target="_blank">View on Github</a>
+        </nav>
+    </header>
+
+    <header class="subHeader">
+        <div class="container">
+            <h2 class="subHeader-title  u-floatLeft  h4">
+                
+                    Design Elements
+                
+                
+                
+                
+                
+                
+                
+                </h2>
+            <ul class="listInline  u-floatRight  subNav">
+                
+                <li>
+                    <a href="/cru-web-styleguide/styleguide/design-elements/color-palette" class="secondaryNav-link  u-linkClean  is-active">Design Elements</a>
+                </li>
+                <li>
+                    <a href="/cru-web-styleguide/styleguide/ui-components/alerts" class="secondaryNav-link  u-linkClean ">UI Components</a>
+                </li>
+                
+
+                
+
+            </ul>
+        </div>
+    </header>
+
+        <div class="container">
+            <div class="row docs-layout">
+    <div class="pageNav--left">
+        
+            <nav class="card">
+    <label class="card-title">Design</label>
+    <a class="card-link  icon--link" href="/cru-web-styleguide/styleguide/design-elements/color-palette">Color Palette</a>
+    <a class="card-link  icon--link" href="/cru-web-styleguide/styleguide/design-elements/ui-colors">UI Colors</a>
+    <a class="card-link  icon--link  is-active" href="/cru-web-styleguide/styleguide/design-elements/typography">Typography</a>
+    <a class="card-link  icon--link" href="/cru-web-styleguide/styleguide/design-elements/icons">Icons</a>
+</nav>
+
+        
+        
+        
+        
+        
+        
+        
+    </div>
+
+    <div class="pageContent markdown-body">
+        <div class="panel  panel-default  p">
+            <h1 class="page-title  styleguide-intro">Typography</h1>
+            
+                <p>Typography Stuff</p>
+            
+            <div class="markdown-body">
+                <h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents">Contents</a></li>
+  <li><a href="#headings">Headings</a></li>
+  <li><a href="#body-text">Body text</a></li>
+  <li><a href="#inline-text-elements">Inline text elements</a></li>
+  <li><a href="#blockquotes">Blockquotes</a></li>
+  <li><a href="#pullquotes">Pullquotes</a></li>
+</ul>
+
+<h2 id="headings">Headings</h2>
+
+<div class="docs-example clearfix"><h1>Dapibus Magna Ornare Tellus</h1>
+<h2>Dapibus Magna Ornare Tellus</h2>
+<h3>Dapibus Magna Ornare Tellus</h3>
+<h4>Dapibus Magna Ornare Tellus</h4>
+<h5>Dapibus Magna Ornare Tellus</h5>
+<h6>Dapibus Magna Ornare Tellus</h6></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>Dapibus Magna Ornare Tellus<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>Dapibus Magna Ornare Tellus<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Dapibus Magna Ornare Tellus<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>Dapibus Magna Ornare Tellus<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>Dapibus Magna Ornare Tellus<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>Dapibus Magna Ornare Tellus<span class="nt">&lt;/h6&gt;</span></code></pre></div>
+
+<h2 id="body-text">Body text</h2>
+
+<div class="docs-example clearfix"><p>Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.</p>
+<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="inline-text-elements">Inline text elements</h2>
+
+<div class="docs-example clearfix"><p>You can use the mark tag to <mark>highlight</mark> text.</p>
+<p><del>This line of text is meant to be treated as deleted text.</del></p>
+<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+<p><u>This line of text will render as underlined</u></p>
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+<p><strong>This line rendered as bold text.</strong></p>
+<p><em>This line rendered as italicized text.</em></p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>You can use the mark tag to <span class="nt">&lt;mark&gt;</span>highlight<span class="nt">&lt;/mark&gt;</span> text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;del&gt;</span>This line of text is meant to be treated as deleted text.<span class="nt">&lt;/del&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;s&gt;</span>This line of text is meant to be treated as no longer accurate.<span class="nt">&lt;/s&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;ins&gt;</span>This line of text is meant to be treated as an addition to the document.<span class="nt">&lt;/ins&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;u&gt;</span>This line of text will render as underlined<span class="nt">&lt;/u&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>This line rendered as bold text.<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;em&gt;</span>This line rendered as italicized text.<span class="nt">&lt;/em&gt;&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="blockquotes">Blockquotes</h2>
+
+<p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
+
+<div class="docs-example clearfix"><blockquote>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+</blockquote></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote&gt;</span>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
+
+<h2 id="pullquotes">Pullquotes</h2>
+
+<div class="docs-example clearfix"><blockquote class="pullquote"><em>But you can’t take a part of truth and make it the whole.</em></blockquote></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"pullquote"</span><span class="nt">&gt;&lt;em&gt;</span>But you can’t take a part of truth and make it the whole.<span class="nt">&lt;/em&gt;&lt;/blockquote&gt;</span></code></pre></div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+        </div>
+        <footer class="footer  u-textCenter">
+            <p class="m--">Copyright Cru 2015.</p>
+            <p><small>This styleguide was created using <a href="https://github.com/primer/primer">Primer</a>.</small></p>
+        </footer>
+
+        <div class="overlay  js-overlay"></div>
+        <nav class="lunchMenu  nav--closed  nav--hidden" id="nav" role="navigation">
+    <ul class="card">
+        <li>
+            <label class="card-title">Design Elements</label>
+        </li>
+        <li>
+            <a class="card-link  icon--link" href="/cru-web-styleguide/design/design-elements/color-palette">Color Palette</a>
+        </li>
+        <li>
+            <a class="card-link  icon--link" href="/cru-web-styleguide/colors/">Colors</a>
+        </li>
+        <li>
+            <a class="card-link  icon--link" href="/cru-web-styleguide/markdown/">Markdown</a>
+        </li>
+    </ul>
+    <a class="nav-close" id="nav-close" href="#top">
+        <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg--close"></use></svg>
+        <span>Return to Top of Page</span>
+    </a>
+</nav>
+
+        <a class="nav-open  js-nav-open" href="#nav">
+            <svg>
+                <g xmlns="http://www.w3.org/2000/svg" id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" sketch:type="MSPage">
+                    <path d="M19.7178139,39 C30.4873665,39 39.2178139,30.2695526 39.2178139,19.5 C39.2178139,8.73044738 30.4873665,0 19.7178139,0 C8.94826129,0 0.217813915,8.73044738 0.217813915,19.5 C0.217813915,30.2695526 8.94826129,39 19.7178139,39 Z M10.6323953,26.0161134 C10.6323953,26.3356204 10.8954221,26.5946321 11.2096529,26.5946321 L28.6616027,26.5946321 C28.9804133,26.5946321 29.2388604,26.3262762 29.2388604,26.0161134 C29.2388604,25.6966064 28.9758336,25.4375948 28.6616027,25.4375948 L11.2096529,25.4375948 C10.8908423,25.4375948 10.6323953,25.7059506 10.6323953,26.0161134 Z M10.6323953,19.5785186 C10.6323953,19.8980257 10.8954221,20.1570373 11.2096529,20.1570373 L28.6616027,20.1570373 C28.9804133,20.1570373 29.2388604,19.8886815 29.2388604,19.5785186 C29.2388604,19.2590116 28.9758336,19 28.6616027,19 L11.2096529,19 C10.8908423,19 10.6323953,19.2683558 10.6323953,19.5785186 Z M10.6323953,13.0161134 C10.6323953,13.3356204 10.8954221,13.5946321 11.2096529,13.5946321 L28.6616027,13.5946321 C28.9804133,13.5946321 29.2388604,13.3262762 29.2388604,13.0161134 C29.2388604,12.6966064 28.9758336,12.4375948 28.6616027,12.4375948 L11.2096529,12.4375948 C10.8908423,12.4375948 10.6323953,12.7059506 10.6323953,13.0161134 Z" id="Oval-11" fill="#4C4749" sketch:type="MSShapeGroup"/>
+                </g>
+            </svg>
+            <span>Menu</span>
+        </a>
+
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="/cru-web-styleguide/js/anchor.min.js"></script>
+        <script>
+        $(function() {
+            $(".js-nav-open").click(function(){
+                $("html").toggleClass("is-open--nav");
+            });
+
+            $(".js-overlay").click(function(){
+                $("html").removeClass("is-open--nav");
+            });
+        });
+        </script>
+        <script>
+        var selector = '.markdown-body h2, .markdown-body h3';
+        addAnchors(selector);
+        </script>
+    </body>
+</html>
