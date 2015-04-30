@@ -3,6 +3,7 @@ layout: default
 ---
 
 <div class="row docs-layout">
+    {% unless page.title == "css" %}
     <div class="pageNav--left">
         {% if page.type == "page-styleguide-design" %}
             {% include sidenav-design.html %}
@@ -12,9 +13,6 @@ layout: default
         {% endif %}
         {% if page.type == "page-documentation-general" %}
             {% include sidenav-general.html %}
-        {% endif %}
-        {% if page.type == "page-documentation-css" %}
-            {% include sidenav-css.html %}
         {% endif %}
         {% if page.type == "page-documentation-js" %}
             {% include sidenav-js.html %}
@@ -26,7 +24,7 @@ layout: default
             {% include sidenav-git.html %}
         {% endif %}
     </div>
-
+    {% endunless %}
     <div class="pageContent markdown-body">
         <div class="panel  panel-default  p">
             <h1 class="page-title  styleguide-intro">{{ page.title }}</h1>
