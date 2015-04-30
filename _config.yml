@@ -16,3 +16,6 @@ sass:
 
 github:
   repo: https://github.com/CruGlobal/cru-web-styleguide.git
+
+gems:
+  - jekyll-redirect-from
