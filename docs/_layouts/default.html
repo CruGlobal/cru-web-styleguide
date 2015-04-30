@@ -83,7 +83,7 @@
                 </li>
                 {% endif %}
 
-                {% if page.type == "page-documentation-general" or page.type == "page-documentation-git" or page.type == "page-documentation-css" or page.type == "page-documentation-js" or page.type == "page-documentation-layouts"  %}
+                {% if page.type == "page-documentation-general" or page.type == "page-documentation-git" or page.type == "page-documentation-css" or page.type == "page-documentation-js" or page.type == "page-documentation-icons"  %}
                 <li>
                     <a href="{{ site.baseurl }}/documentation/general/principles" class="secondaryNav-link  u-linkClean {% if page.type == "page-documentation-general" %} is-active{% endif %}">General Principles</a>
                 </li>
@@ -94,10 +94,10 @@
                     <a href="{{ site.baseurl }}/documentation/js/" class="secondaryNav-link  u-linkClean {% if page.type == "page-documentation-js" %} is-active{% endif %}">JS</a>
                 </li>
                 <li>
-                    <a href="{{ site.baseurl }}/styleguide/icons/" class="secondaryNav-link  u-linkClean {% if page.type == "page-documentation-icons" %} is-active{% endif %}">Icons</a>
+                    <a href="{{ site.baseurl }}/documentation/icons/" class="secondaryNav-link  u-linkClean {% if page.type == "page-documentation-icons" %} is-active{% endif %}">Icons</a>
                 </li>
                 <li>
-                    <a href="{{ site.baseurl }}/styleguide/git/" class="secondaryNav-link  u-linkClean {% if page.type == "page-documentation-git" %} is-active{% endif %}">Git</a>
+                    <a href="{{ site.baseurl }}/documentation/git/workflow" class="secondaryNav-link  u-linkClean {% if page.type == "page-documentation-git" %} is-active{% endif %}">Git</a>
                 </li>
                 {% endif %}
                 {% if page.type == "page-performance-css" or page.type == "page-performance-js" %}
