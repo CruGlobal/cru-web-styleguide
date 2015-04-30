@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="js">
+<!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      CSS &middot; Cru Styleguide
+    </title>
+    <script>
+/*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+(function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+    grunticon(["/cru-web-styleguide/css/bg/icons.data.svg.css", "/cru-web-styleguide/css/bg/icons.data.png.css", "/cru-web-styleguide/css/bg/icons.fallback.css"]);
+</script>
+<noscript><link href="/cru-web-styleguide/css/bg/icons.fallback.css" rel="stylesheet"></noscript>
+
+    <link rel="stylesheet" href="/cru-web-styleguide/docs.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/cru-web-styleguide/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/cru-web-styleguide/favicon.ico">
+  </head>
+  <body class="page  page--documentation-css">
+
+    <header class="navbar  navbar-default  siteHeader">
+        <hgroup class="titleGroup  navbar-header">
+            <a href="/cru-web-styleguide/" title="Return to Homepage" class="icon--cruLogo"><h1 class="sr-only">Cru is a caring community passionate about connecting people to Jesus Christ</h1></a>
+        </hgroup>
+
+        <nav class="navigation">
+          <a class="navigation-link" href="/cru-web-styleguide/styleguide/design-elements/color-palette">Style Guide</a>
+          <a class="navigation-link" href="/cru-web-styleguide/documentation/general/principles">Documentation</a>
+          <!--<a class="navigation-link" href="/cru-web-styleguide/performance/css-analytics">Performance</a>-->
+          <a class="navigation-link" href="https://github.com/CruGlobal/crubrand" target="_blank">View on Github</a>
+        </nav>
+    </header>
+
+    <header class="subHeader">
+        <div class="container">
+            <h2 class="subHeader-title  u-floatLeft  h4">
+                
+                
+                
+                
+                    CSS
+                
+                
+                
+                
+                
+                </h2>
+            <ul class="listInline  u-floatRight  subNav">
+                
+
+                
+                <li>
+                    <a href="/cru-web-styleguide/documentation/general/principles" class="secondaryNav-link  u-linkClean ">General Principles</a>
+                </li>
+                <li>
+                    <a href="/cru-web-styleguide/documentation/css/" class="secondaryNav-link  u-linkClean  is-active">CSS</a>
+                </li>
+                <li>
+                    <a href="/cru-web-styleguide/documentation/js/" class="secondaryNav-link  u-linkClean ">JS</a>
+                </li>
+                <li>
+                    <a href="/cru-web-styleguide/styleguide/icons/" class="secondaryNav-link  u-linkClean ">Icons</a>
+                </li>
+                <li>
+                    <a href="/cru-web-styleguide/styleguide/git/" class="secondaryNav-link  u-linkClean ">Git</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </header>
+
+        <div class="container">
+            <div class="row docs-layout">
+    
+    <div class="pageNav--left">
+        
+        
+        
+        
+        
+        
+    </div>
+    
+    <div class="pageContent markdown-body">
+        <div class="panel  panel-default  p">
+            <h1 class="page-title  styleguide-intro">CSS</h1>
+            
+            <div class="markdown-body">
+                <p>Cru's naming conventions are adapted from the work being done in Nicolas Gallagher's SUITCSS. Which is to say, it relies on structured, meaningful class names. This is to help work around the current limits of applying CSS to the DOM (i.e., the lack of style encapsulation) and to better communicate the relationships between classes. We also heaviliy rely on the pricimples taught by Harry Roberts in Guideline.es.</p>
+<p>We are currently using Bootstrap as our foundation because it does much of the heavy lifting for us. We have adapted it to best fit our uses and eliminate extraneous code. Our basic build can be installed as a bower package, which includes Bootstrap, with our variable overrides and other changes.</p>
+<p>Our primary goal is to create a scalable, maintainable and reusable css. Here is a <a href="https://github.com/davidtheclark/scalable-css-reading-list"></a>
+[Scalable CSS Reading List](https://github.com/davidtheclark/scalable-css-reading-list): take a
+look.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents">Contents</a></li>
+  <li><a href="#a-quick-word-about-the-dangers-of-sass">A quick word about the dangers of SASS</a></li>
+  <li><a href="#document-anatomy">Document Anatomy</a>    <ul>
+      <li><a href="#general">General</a></li>
+      <li><a href="#single-file-vs-many-files">Single file vs. many files</a></li>
+      <li><a href="#table-of-contents">Table of contents</a></li>
+      <li><a href="#section-titles">Section titles</a></li>
+      <li><a href="#comments">Comments</a></li>
+    </ul>
+  </li>
+  <li><a href="#file-structure">File Structure</a></li>
+  <li><a href="#declarations">Declarations</a>    <ul>
+      <li><a href="#property-order">Property Order</a></li>
+      <li><a href="#single-declarations">Single Declarations</a></li>
+      <li><a href="#shorthand-notation">Shorthand Notation</a></li>
+    </ul>
+  </li>
+  <li><a href="#formatting">Formatting</a>    <ul>
+      <li><a href="#spacing">Spacing</a></li>
+      <li><a href="#whitespace-and-punctuation">Whitespace and Punctuation</a></li>
+    </ul>
+  </li>
+  <li><a href="#javascript">Javascript</a></li>
+  <li><a href="#utilities">Utilities</a>    <ul>
+      <li><a href="#u-utilityname">u-utilityname</a></li>
+    </ul>
+  </li>
+  <li><a href="#components">Components</a>    <ul>
+      <li><a href="#componentname">componentName</a></li>
+      <li><a href="#componentname--modifiername">componentname–modifierName</a></li>
+      <li><a href="#componentname-descendantname">componentname-descendantName</a></li>
+      <li><a href="#is-stateofcomponent">is-stateOfComponent</a></li>
+    </ul>
+  </li>
+  <li><a href="#variables">Variables</a>    <ul>
+      <li><a href="#colors">colors</a></li>
+      <li><a href="#z-index">z-index</a></li>
+    </ul>
+  </li>
+  <li><a href="#media-queries">Media Queries</a></li>
+  <li><a href="#performance">Performance</a>    <ul>
+      <li><a href="#specificity">Specificity</a></li>
+      <li><a href="#layouts-and-paints">Layouts and Paints</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="a-quick-word-about-the-dangers-of-sass">A quick word about the dangers of SASS</h2>
+
+<p>While SASS can be a powerful tool in the right hands, in the wrong hands you can end up with
+selectors like this:</p>
+
+<p><code>
+body.getaways-gallery-gig .page_header #filters #categories_filter
+.pane .categories_container .categories ul li.selectBox-selected a {
+color: #333;
+}
+</code></p>
+
+<p>Because of the ease of nesting in preprocessors like SASS, inexperienced devs
+will often nest like crazy without understanding the ramifications on the
+compiled code. This adds a ton of unnecessary specificity that requires the
+same selector to override or worse, using !important. (Sometimes times devs will even resort
+to inline styles! Ewww.)</p>
+
+<h2 id="document-anatomy">Document Anatomy</h2>
+
+<p>No matter the document, we must always try and keep a common formatting. This means consistent
+commenting, consistent syntax and consistent naming.</p>
+
+<h3 id="general">General</h3>
+<p>Limit your stylesheets to a maximum 80 character width where possible. Exceptions may be gradient
+syntax and URLs in comments. Thereâ€™s nothing we can do about those.</p>
+
+<h3 id="single-file-vs-many-files">Single file vs. many files</h3>
+
+<p>While some people prefer to work with single, large files we choose not to do this. We have chosen
+to split up our stylesheets into lots of tiny includes as this allows each file to be more
+scannable and focused.</p>
+
+<h3 id="table-of-contents">Table of contents</h3>
+
+<p>At the top of stylesheets, a table of contents will detail the sections contained in the document,
+for example:</p>
+
+<pre><code>/*------------------------------------*\
+    #CONTENTS
+\*------------------------------------*/
+/**
+ * CONTENTS............It's what you are reading
+ * RESET...............Set our reset defaults
+ * FONT-FACE...........Import brand font files
+ */
+</code></pre>
+
+<p>This will tell the next developer(s) exactly what they can expect to find in this file. Each item
+in the table of contents maps directly to a section title.</p>
+
+<p>Since we are working across multiple files then each item in the table of contents will map to an
+include which pulls that section in.</p>
+
+<h3 id="section-titles">Section titles</h3>
+
+<p>The table of contents would be of no use unless it had corresponding section titles. Denote a
+section thus:</p>
+
+<pre><code>/*------------------------------------*\
+    #RESET
+\*------------------------------------*/
+</code></pre>
+
+<p>The <code>#</code> prefixing the name of the section allows us to run a find ([Cmd|Ctrl]+F) for
+<code>#[SECTION-NAME]</code> and <strong>limit our search scope to section titles only</strong>.</p>
+
+<h3 id="comments">Comments</h3>
+
+<p>Code is written and maintained by people. Ensure your code is descriptive, well commented, and
+approachable by others. Great code comments convey context or purpose. Do not simply reiterate a
+component or class name.</p>
+
+<p>Be sure to write in complete sentences for larger comments and succinct phrases for general notes.</p>
+
+<p><strong>Bad Example:</strong>
+<code>
+/* Modal header */
+.modal-header {
+  ...
+}
+</code></p>
+
+<p><strong>Good Example:</strong>
+<code>
+/* Wrapping element for .modal-title and .modal-close */
+.modal-header {
+  ...
+}
+</code></p>
+
+<h2 id="file-structure">File Structure</h2>
+
+<p>The typcial file structure of a project will look like:</p>
+
+<p>```
+bower_components/
+â”œâ”€â”€ crubrand/
+â”‚   â”œâ”€â”€ bootstrap-variations/
+â”‚   â”œâ”€â”€ bourbon/
+â”‚   â”œâ”€â”€ components/
+â”‚   â”œâ”€â”€ elements/
+â”‚   â”œâ”€â”€ generic/
+â”‚   â”œâ”€â”€ ie/
+â”‚   â”œâ”€â”€ variables/
+â”‚   â”œâ”€â”€ _crubrand.scss
+â”‚   â”œâ”€â”€ _overrides.scss
+â”‚   â””â”€â”€ _settings.scss</p>
+
+<p>[projectname]-scss/
+â”œâ”€â”€ bootstrap-replacement/
+â”‚   â”œâ”€â”€ …
+â”‚   â””â”€â”€ …
+â”œâ”€â”€ ie/
+â”‚   â”œâ”€â”€ …
+â”‚   â””â”€â”€ …
+â”œâ”€â”€ …
+â”œâ”€â”€ …
+â”œâ”€â”€ projectname.ie.scss
+â””â”€â”€ projectname.scss
+```</p>
+
+<h2 id="declarations">Declarations</h2>
+
+<h3 id="property-order">Property Order</h3>
+
+<p>Properties should be organized in the following order:
+  1. Extends
+  2. Empty Mixins
+  3. Positioning
+  4. Display and Box Model
+  5. Color
+  6. Text
+  7. Other
+  8. Mixins
+  9. Media Queries
+  10. Nested Properties.</p>
+
+<p>```
+.selector {
+  /* Extend */
+  @extend %component;</p>
+
+<p>@include clearfix;</p>
+
+<p>/* Positioning */
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;</p>
+
+<p>/* Display &amp; Box Model */
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 10px solid #333;
+  margin: 10px;</p>
+
+<p>/* Color */
+  background: #000;
+  color: #fff</p>
+
+<p>/* Text */
+  font-family: sans-serif;
+  line-height: 1.4;
+  text-align: right;</p>
+
+<p>/* Other */
+  cursor: pointer;</p>
+
+<p>/* Mixins */
+  @include font-size(16px);</p>
+
+<p>/* Media query mixin */
+  @include mq (800px) {
+    …
+  }</p>
+
+<p>.selector-child{
+    …
+  }
+}
+```</p>
+
+<h3 id="single-declarations">Single Declarations</h3>
+
+<p>In instances where a rule set includes only one declaration, consider removing line breaks for
+readability and faster editing. Any rule set with multiple declarations should be split to separate
+lines.</p>
+
+<p>The key factor here is error detectionâ€”e.g., a CSS validator stating you have a syntax error on
+Line 183. With a single declaration, there’s no missing it. With multiple declarations, separate
+lines is a must for your sanity.</p>
+
+<p>```
+/* Single declarations on one line */
+.one-third { width: 33.333%; }
+.one-half { width: 50%; }
+.one-whole { width: 100%; }</p>
+
+<p>/* Multiple declarations, one per line */
+.sprite {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url(../img/sprite.png);
+}
+```</p>
+
+<h3 id="shorthand-notation">Shorthand Notation</h3>
+
+<p>Strive to limit use of shorthand declarations to instances where you must explicitly set all the
+available values. Common overused shorthand properties include:</p>
+
+<ul>
+  <li>padding</li>
+  <li>margin</li>
+  <li>font</li>
+  <li>background</li>
+  <li>border</li>
+  <li>border-radius</li>
+</ul>
+
+<p>Often times we don’t need to set all the values a shorthand property represents. For example, HTML
+headings only set top and bottom margin, so when necessary, only override those two values.
+Excessive use of shorthand properties often leads to sloppier code with unnecessary overrides and
+unintended side effects.</p>
+
+<p>The Mozilla Developer Network has <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">a great article on shorthand properties</a> for those
+unfamiliar with notation and behavior.</p>
+
+<p><strong>Bad Example</strong>
+<code>
+.element {
+  margin: 0 0 10px;
+  background: red;
+  background: url("image.jpg");
+  border-radius: 3px 3px 0 0;
+}
+</code></p>
+
+<p><strong>Good Example</strong>
+<code>
+.element {
+  margin-bottom: 10px;
+  background-color: red;
+  background-image: url("image.jpg");
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+</code></p>
+
+<h2 id="formatting">Formatting</h2>
+<p>The following are some high level page formatting style rules.</p>
+
+<h3 id="spacing">Spacing</h3>
+<p>CSS rules should be comma separated but live on new lines:</p>
+
+<p><strong>Correct:</strong>
+<code>
+.content,
+.content-edit {
+  â€¦
+}
+</code></p>
+
+<p><strong>Incorrect:</strong>
+<code>
+.content, .content-edit {
+  â€¦
+}
+</code></p>
+
+<p>CSS blocks should be separated by a single new line. Not two. Not 0.</p>
+
+<p><strong>Correct:</strong>
+```
+.content {
+  â€¦
+}</p>
+
+<p>.content-edit {
+  â€¦
+}
+```</p>
+
+<p><strong>Incorrect:</strong>
+<code>
+.content {
+  â€¦
+}
+.content-edit {
+  â€¦
+}
+</code></p>
+
+<h3 id="whitespace-and-punctuation">Whitespace and Punctuation</h3>
+
+<ul>
+  <li>
+    <p>Indent using 4 soft tabs. [Indentation]</p>
+  </li>
+  <li>
+    <p>End each file with an empty newline. After all, youâ€™re not an animal, are you? [FinalNewline]</p>
+  </li>
+  <li>
+    <p>Include an empty line between all statements â€” i.e. rule sets, at-rules, and Sass directives.
+Even the nested ones. Spaces help people, and people are important. (Variable definitions are
+like properties and donâ€™t need to be spaced.) [EmptyLineBetweenBlocks]</p>
+  </li>
+  <li>
+    <p>Include spaces after commas and colons, not before. As in written English. [SpaceAfterComma, SpaceAfterPropertyColon,SpaceAfterPropertyName]</p>
+  </li>
+  <li>
+    <p>Do not include spaces between parentheses and parenthesized. As in written English. [SpaceBetweenParens]</p>
+  </li>
+  <li>
+    <p>Use double quotation marks. Quotes are optional in CSS and LESS. We use double quotes as it
+is visually clearer that the string is not a selector or a style property. [StringQuotes]</p>
+  </li>
+  <li>
+    <p>End every declaration with a semicolon, with no whitespace in front of it. [TrailingSemicolon]</p>
+  </li>
+</ul>
+
+<h2 id="javascript">Javascript</h2>
+
+<p>syntax: <code>js-&lt;targetName&gt;</code></p>
+
+<p>JavaScript-specific classes reduce the risk that changing the structure or theme of components
+will inadvertently affect any required JavaScript behaviour and complex functionality. It is
+not neccesarry to use them in every case, just think of them as a tool in your utility belt. If
+you are creating a class, which you dont intend to use for styling, but instead only as a
+selector in JavaScript, you should probably be adding the <code>js-</code> prefix. In practice this looks
+like this:</p>
+
+<p><code>
+&lt;a href="/login" class="btn  btn-primary  js-login"&gt;&lt;/a&gt;
+</code></p>
+
+<p><strong>Again, JavaScript-specific classes should not, under any circumstances, be styled</strong>.</p>
+
+<h2 id="utilities">Utilities</h2>
+
+<p>syntax: <code>u-&lt;utlitityName&gt;</code></p>
+
+<p>Utility classes are low-level structural and positional traits. Utilities can be applied directly
+to any element; multiple utilities can be used together; and utilities can be used alongside
+component classes.</p>
+
+<p>Utilities exist because certain CSS properties and patterns are used frequently.
+For example: floats, containing floats, vertical alignment, text truncation. Relying on utilities
+can help to reduce repetition and provide consistent implementations.</p>
+
+<p>Utilities are complete single responsibility rules which have a very specific and targeted task.
+It is also quite common for these rulesâ€™ declarations to carry !important so as to guarantee
+they beat other less specific ones. They do one thing in a very heavy-handed and inelegant way.
+They are to be used as a last resort when no other CSS hooks are available, or to tackle
+completely unique circumstances, e.g. using <code>.u-text-center</code> to centrally align one piece of text
+once and once only. They are only one step away from inline styles, so should be used sparingly.</p>
+
+<p>Because of their heavy-handed approach, their global reusability, and their exceptional use-case,
+it is incredibly important that we signal Utilities to other developers. We do not want anyone
+trying to bind onto these in future selectors.</p>
+
+<h3 id="u-utilityname">u-utilityname</h3>
+
+<p>Utilities must be prefixed with a <code>u-</code> namespace. By using a namespace, we can introduce a simple
+and unbreakable rule: if it begins with <code>u-</code>, never reassign to it.</p>
+
+<h2 id="components">Components</h2>
+
+<p>Syntax: <code>&lt;componentName&gt;[--modifierName|-descendantName]</code></p>
+
+<p>This has several benefits when reading and writing HTML and CSS:</p>
+
+<ul>
+  <li>It helps to distinguish between the classes for the root of the component, descendent elements,
+and modifications.</li>
+  <li>It keeps the specificity of selectors low.</li>
+  <li>It helps to decouple presentation semantics from document semantics.</li>
+</ul>
+
+<p>We use a modified version of the SUIT BEM naming convention.</p>
+
+<p>```
+/**
+ * The top-level â€˜Blockâ€™ of a component.
+ */
+.modal {}</p>
+
+<p>/**
+   * An â€˜Elementâ€™ that is a part of the larger Block.
+   */
+  .modal-title {}</p>
+
+<p>/**
+ * A â€˜Modifierâ€™ of the Block.
+ */
+.modal–large {}
+```<br />
+In our CSS, this naming isnâ€™t all that useful, but when we see it in out HTML we get a much
+better view of whatâ€™s going on:</p>
+
+<p>```
+&lt;div class="modal  modal--large"&gt;</p>
+
+<h1 class="modal-title">Sign into your account</h1>
+
+<div class="modal-content">
+    <form class="form-login">
+    </form>
+  </div>
+
+<p>&lt;/div&gt;
+```</p>
+
+<p>We can see from this that we have a number of classes all relating to our <code>.modal</code>, and a class
+of <code>.form-login</code> which begins a brand new context.</p>
+
+<p>Being able to glean this level of information from our classes in our markup actually tells us
+quite a lot about the corresponding CSS, and also about how and why they interact with each other
+in the way they do. It also tells us about how we should (or should not) reuse these classes
+elsewhere in the DOM: <code>.modal--large</code>, <code>.modal-title</code>, and <code>.modal-content</code> all have a dependency
+on <code>.modal</code>, and therefore cannot be used without that .modal class also being present.</p>
+
+<h3 id="componentname">componentName</h3>
+
+<p>The component’s name must be written in camel case. This is the top-level of a component.</p>
+
+<p><code>
+.myComponent {
+    /* ... */
+}
+</code></p>
+
+<p><code>
+&lt;div class="myComponent"&gt;
+  ...
+&lt;/div&gt;
+</code></p>
+
+<h3 id="componentname--modifiername">componentname–modifierName</h3>
+
+<p>A component modifier is a class that modifies the presentation of the base component in some form.
+Modifier names must be written in camel case and be separated from the component name by two
+hyphens. The class should be included in the HTML in addition to the base component class.</p>
+
+<p>```
+/* Core button <em>/
+.btn {
+    /</em> â€¦ */
+}</p>
+
+<p>/* Default button style <em>/
+.btn–default {
+    /</em> â€¦ */
+}
+````</p>
+
+<p><code>
+&lt;div class="btn  btn--default"&gt;
+  ...
+&lt;/div&gt;
+</code></p>
+
+<h3 id="componentname-descendantname">componentname-descendantName</h3>
+
+<p>A component descendant is a class that is attached to a descendant node of a component. It’s
+responsible for applying presentation directly to the descendant on behalf of a particular
+component. Descendant names must be written in camel case.</p>
+
+<h3 id="is-stateofcomponent">is-stateOfComponent</h3>
+
+<p>Use <code>is/has-stateName</code>, depending on the context, for state-based modifications of components.
+The state name must be Camel case. <strong>Never style these classes directly; they should always
+be used as an adjoining class.</strong></p>
+
+<p>JS can add/remove these classes. This means that the same state names can be used in multiple
+contexts, but every component must define its own styles for the state (as they are scoped to
+the component).</p>
+
+<p>```
+.dropdown {
+  /* â€¦ */
+}</p>
+
+<p>.dropdown.is-open {
+  /* â€¦ */
+}
+```</p>
+
+<p><code>
+&lt;ul class="dropdown  is-open"&gt;
+  ...
+&lt;/ul&gt;
+</code></p>
+
+<h2 id="variables">Variables</h2>
+
+<h3 id="colors">colors</h3>
+
+<p>When implementing feature styles, you should only be using color variables provided by _colors.scss
+found in crubrand.</p>
+
+<p>When adding a color variable to _colors.scss, using hex color units are preferred over RGB and RGBA,
+named, HSL, or HSLA values. We also prefer to shorten hex values whenever possible</p>
+
+<p>Color variables should use the naming convention <code>color-[nameOfColor]</code></p>
+
+<p><strong>Correct:</strong>
+<code>
+#fff;
+#3a3a3a;
+</code></p>
+
+<p><strong>Incorrect:</strong>
+```
+#ffffff;
+rgb(50, 50, 50);
+rgba(50, 50, 50, 0.2);
+white;
+hsl(120, 100%, 50%);
+hsla(120, 100%, 50%, 1);</p>
+
+<p>```</p>
+
+<h3 id="z-index">z-index</h3>
+
+<p>Please use the z-index scale defined in _z-index.scss found in crubrand.</p>
+
+<p><code>$zIndex-1 - $zIndex-9</code> are provided. Nothing should be higher then <code>$zIndex-9</code>.</p>
+
+<!--
+### font-weight
+
+### line-height
+
+### letter-spacing
+
+
+## Mixins
+
+
+## Extends
+-->
+
+<h2 id="media-queries">Media Queries</h2>
+
+<p>Place media queries inside their relevant rule sets whenever possible. Don’t bundle them all in a
+separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss
+them in the future. Here’s a typical setup.</p>
+
+<p><strong>Correct:</strong>
+<code>
+.componentName {
+    @media (min-width: 480px) {
+      /* ... */
+    }
+}
+</code></p>
+
+<p><strong>Incorrect:</strong>
+```
+@media (min-width: 480px) {
+    .componentName{ /* … <em>/ }
+    .anotherComponent{ /</em> … */ }
+}</p>
+
+<p>```</p>
+
+<h2 id="performance">Performance</h2>
+
+<h3 id="specificity">Specificity</h3>
+
+<p>Although in the name (cascading style sheets), cascading can introduce unnecessary performance
+overhead for applying styles. Take the following example:</p>
+
+<p><code>
+  ul.user-list li span a:hover { color: red; }
+</code></p>
+
+<p>Styles are resolved during the renderer’s layout pass. The selectors are resolved right to left,
+exiting when it has been detected the selector does not match. Therefore, in this example every a
+tag has to be inspected to see if it resides inside a span and a list. As you can imagine this
+requires a lot of DOM walking and and for large documents can cause a significant increase in the
+layout time. For further reading checkout: https://developers.google.com/speed/docs/best-practices/rendering#UseEfficientCSSSelectors</p>
+
+<p><a href="http://css-tricks.com/efficiently-rendering-css/">The CSS Tricks article about selector performance</a>
+should help explain the important concept of the key selector. Seemingly specific rules like
+<code>.component-descendant-descendant div</code> are actual quite expensive in complex apps because rules
+are read from right to left. It needs to look up all the divs first (which could be thousands) then
+go up the DOM from there.</p>
+
+<p>If we know we want to give all a elements inside the .user-list red on hover we can simplify
+this style to:</p>
+
+<p><code>
+.user-list &gt; a:hover {
+  color: red;
+}
+</code></p>
+
+<p>If we want to only style specific a elements inside .user-list we can give them a specific class:</p>
+
+<p><code>
+.user-list &gt; .link-primary:hover {
+  color: red;
+}
+</code></p>
+
+<h3 id="layouts-and-paints">Layouts and Paints</h3>
+
+<p><a href="http://perfectionkills.com/profiling-css-for-fun-and-profit-optimization-notes/">Juriy Zaytsevâ€™s post on CSS profiling</a>
+profiles browsers on selector matching, layouts, paints, and parsing times of a complex app. It
+confirms the theory that highly specific selectors are bad for big apps. Harry Roberts of CSS
+Wizardry also wrote about <a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/">CSS selector performance</a>.</p>
+
+<p>Layouts and paints can cause lots of performance damage. Be cautious with CSS3 features like
+text-shadow, box-shadow, border-radius, and animations, <a href="http://www.html5rocks.com/en/tutorials/speed/css-paint-times/">especially when used together</a>. Trello wrote a big
+blog post about performance <a href="http://blog.fogcreek.com/we-spent-a-week-making-trello-boards-load-extremely-fast-heres-how-we-did-it/">back in January 2014</a>.
+Much of this was due to layout thrashing caused by JavaScript, but we cut out some heavy styles
+like borders, gradients, and shadows, which helped a lot.</p>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+        </div>
+        <footer class="footer  u-textCenter">
+            <p class="m--">Copyright Cru 2015.</p>
+            <p><small>This styleguide was created using <a href="https://github.com/primer/primer">Primer</a>.</small></p>
+        </footer>
+
+        <div class="overlay  js-overlay"></div>
+        <nav class="lunchMenu  nav--closed  nav--hidden" id="nav" role="navigation">
+    <ul class="card">
+        <li>
+            <label class="card-title">Design Elements</label>
+        </li>
+        <li>
+            <a class="card-link  icon--link" href="/cru-web-styleguide/design/design-elements/color-palette">Color Palette</a>
+        </li>
+        <li>
+            <a class="card-link  icon--link" href="/cru-web-styleguide/colors/">Colors</a>
+        </li>
+        <li>
+            <a class="card-link  icon--link" href="/cru-web-styleguide/markdown/">Markdown</a>
+        </li>
+    </ul>
+    <a class="nav-close" id="nav-close" href="#top">
+        <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg--close"></use></svg>
+        <span>Return to Top of Page</span>
+    </a>
+</nav>
+
+        <a class="nav-open  js-nav-open" href="#nav">
+            <svg>
+                <g xmlns="http://www.w3.org/2000/svg" id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" sketch:type="MSPage">
+                    <path d="M19.7178139,39 C30.4873665,39 39.2178139,30.2695526 39.2178139,19.5 C39.2178139,8.73044738 30.4873665,0 19.7178139,0 C8.94826129,0 0.217813915,8.73044738 0.217813915,19.5 C0.217813915,30.2695526 8.94826129,39 19.7178139,39 Z M10.6323953,26.0161134 C10.6323953,26.3356204 10.8954221,26.5946321 11.2096529,26.5946321 L28.6616027,26.5946321 C28.9804133,26.5946321 29.2388604,26.3262762 29.2388604,26.0161134 C29.2388604,25.6966064 28.9758336,25.4375948 28.6616027,25.4375948 L11.2096529,25.4375948 C10.8908423,25.4375948 10.6323953,25.7059506 10.6323953,26.0161134 Z M10.6323953,19.5785186 C10.6323953,19.8980257 10.8954221,20.1570373 11.2096529,20.1570373 L28.6616027,20.1570373 C28.9804133,20.1570373 29.2388604,19.8886815 29.2388604,19.5785186 C29.2388604,19.2590116 28.9758336,19 28.6616027,19 L11.2096529,19 C10.8908423,19 10.6323953,19.2683558 10.6323953,19.5785186 Z M10.6323953,13.0161134 C10.6323953,13.3356204 10.8954221,13.5946321 11.2096529,13.5946321 L28.6616027,13.5946321 C28.9804133,13.5946321 29.2388604,13.3262762 29.2388604,13.0161134 C29.2388604,12.6966064 28.9758336,12.4375948 28.6616027,12.4375948 L11.2096529,12.4375948 C10.8908423,12.4375948 10.6323953,12.7059506 10.6323953,13.0161134 Z" id="Oval-11" fill="#4C4749" sketch:type="MSShapeGroup"/>
+                </g>
+            </svg>
+            <span>Menu</span>
+        </a>
+
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="/cru-web-styleguide/js/anchor.min.js"></script>
+        <script>
+        $(function() {
+            $(".js-nav-open").click(function(){
+                $("html").toggleClass("is-open--nav");
+            });
+
+            $(".js-overlay").click(function(){
+                $("html").removeClass("is-open--nav");
+            });
+        });
+        </script>
+        <script>
+        var selector = '.markdown-body h2, .markdown-body h3';
+        addAnchors(selector);
+        </script>
+    </body>
+</html>
