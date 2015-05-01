@@ -12,7 +12,7 @@ excerpt: Group a series of buttons together on a single line with the button gro
 
 ## Basic
 
-Wrap a series of buttons with .btn in .btn-group.
+Wrap a series of buttons with `.btn` in `.btn-group`.
 
 {% example html %}
 <div class="btn-group" role="group" aria-label="...">
@@ -24,7 +24,7 @@ Wrap a series of buttons with .btn in .btn-group.
 
 ## Toolbar
 
-Combine sets of <div class="btn-group"> into a <div class="btn-toolbar"> for more complex components.
+Combine sets of `<div class="btn-group">` into a `<div class="btn-toolbar">` for more complex components.
 
 {% example html %}
 <div class="btn-toolbar" role="toolbar" aria-label="...">
@@ -46,7 +46,7 @@ Combine sets of <div class="btn-group"> into a <div class="btn-toolbar"> for mor
 
 ## Sizing
 
-Instead of applying button sizing classes to every button in a group, just add .btn-group-* to each .btn-group, including when nesting multiple groups.
+Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including when nesting multiple groups.
 
 {% example html %}
 <div class="btn-group btn-group-lg" role="group" aria-label="...">
@@ -69,7 +69,7 @@ Instead of applying button sizing classes to every button in a group, just add .
 
 ## Nesting
 
-Place a .btn-group within another .btn-group when you want dropdown menus mixed with a series of buttons.
+Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons.
 
 {% example html %}
 <div class="btn-group" role="group" aria-label="...">
