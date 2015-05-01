@@ -277,12 +277,15 @@ $base-spacing-unit: 29px;
   }
 
     > h2 {
+        position: relative;
+        display: inline-block;
         margin-bottom: round($base-spacing-unit / 2);
 
         text-transform: uppercase;
         color: $colorText--muted;
         font-weight: bold;
-        @include font-size(12px);
+
+        @include font-size(12px, false);
     }
 
   .highlight + h2 {

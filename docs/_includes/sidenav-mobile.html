@@ -1,20 +1,145 @@
 <nav class="lunchMenu  nav--closed  nav--hidden" id="nav" role="navigation">
-    <ul class="card">
+    <ul class="card  listBlock">
         <li>
             <label class="card-title">Design Elements</label>
-        </li>
-        <li>
-            <a class="card-link  icon--link{% if page.title == "Color Palatte" %}  is-active{% endif %}" href="{{ site.baseurl }}/design/design-elements/color-palette">Color Palette</a>
-        </li>
-        <li>
-            <a class="card-link  icon--link{% if page.title == "Colors" %}  is-active{% endif %}" href="{{ site.baseurl }}/colors/">Colors</a>
-        </li>
-        <li>
-            <a class="card-link  icon--link{% if page.title == "Markdown" %}  is-active{% endif %}" href="{{ site.baseurl }}/markdown/">Markdown</a>
+            <ul class="listBlock">
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Color Palette" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/design-elements/color-palette">Color Palette</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "UI Colors" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/design-elements/ui-colors">UI Colors</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Typography" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/design-elements/typography">Typography</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Icons" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/design-elements/icons">Icons</a>
+                </li>
+            </ul>
         </li>
     </ul>
+    <ul class="card  listBlock">
+        <li>
+            <label class="card-title">UI Components</label>
+            <ul class="listBlock">
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Alerts" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/alerts">Alerts</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Badges" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/badges">Badges</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Breadcrumbs" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/breadcrumbs">Breadcrumbs</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Button Groups" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/button-groups">Button Groups</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Buttons" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/buttons">Buttons</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Captions" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/captions">Captions</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Close" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/close">Close</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Forms" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/forms">Forms</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Grids" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/grids">Grids</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Images" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/images">Images</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Labels" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/labels">Labels</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "List Groups" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/list-groups">List Groups</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Lists" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/lists">Lists</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Media" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/media">Media</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Modals" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/modals">Modals</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Navs" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/navs">Navs</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Navbar" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/navbar">Navbar</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Pager" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/pager">Pager</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Pagination" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/pagination">Pagination</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Panels" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/panels">Panels</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Popovers" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/popovers">Popovers</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Progress Bars" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/progress-bars">Progress Bars</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Tables" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/tables">Tables</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Thumbnails" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/thumbnails">Thumbnails</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Tooltips" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/tooltips">Tooltips</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Wells" %}  is-active{% endif %}" href="{{ site.baseurl }}/styleguide/ui-components/wells">Wells</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="card  listBlock">
+        <label class="card-title">Documentation</label>
+        <li>
+            <label class="card-title">General Principles</label>
+            <ul class="listBlock">
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Development Principles" %}  is-active{% endif %}" href="{{ site.baseurl }}/documentation/general/principles">Development Principles</a>
+                </li>
+                <li>
+                    <a class="card-link  icon--link{% if page.title == "Getting Started" %}  is-active{% endif %}" href="{{ site.baseurl }}/documentation/general/getting-started">Getting Started</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <label class="card-title">
+                <a href="{{ site.baseurl }}/documentation/css/" class="card-link  icon--link {% if page.type == "page-documentation-css" %} is-active{% endif %}">CSS</a>
+            </label>
+        </li>
+        <li>
+            <label class="card-title">
+                <a href="{{ site.baseurl }}/documentation/js/" class="card-link  icon--link {% if page.type == "page-documentation-js" %} is-active{% endif %}">JS</a>
+            </label>
+        </li>
+        <li>
+            <label class="card-title">
+                <a href="{{ site.baseurl }}/styleguide/icons/" class="card-link  icon--link {% if page.type == "page-documentation-icons" %} is-active{% endif %}">Icons</a>
+            </label>
+        </li>
+        <li>
+            <label class="card-title">
+                <a href="{{ site.baseurl }}/styleguide/git/" class="card-link  icon--link {% if page.type == "page-documentation-git" %} is-active{% endif %}">Git</a>
+            </label>
+        </li>
+    </ul>
+
     <a class="nav-close" id="nav-close" href="#top">
         <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg--close"></use></svg>
-        <span>Return to Top of Page</span>
     </a>
 </nav>
