@@ -296,6 +296,9 @@ $base-spacing-unit: 29px;
       margin-bottom: 3em;
   }
 
+    .docs-example {
+        margin-bottom: $base-spacing-unit;
+    }
 
 
   p,
@@ -316,6 +319,7 @@ $base-spacing-unit: 29px;
   }
 
   // Lists, Blockquotes & Such
+
   ul,
   ol {
     padding-left: 2em;
@@ -324,6 +328,10 @@ $base-spacing-unit: 29px;
       padding: 0;
       list-style-type: none;
     }
+  }
+
+  .dropdown-menu {
+    padding-left: 0;
   }
 
   // Did someone complain about list spacing? Encourage them
