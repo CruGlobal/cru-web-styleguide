@@ -279,7 +279,6 @@ $base-spacing-unit: 29px;
     > h2 {
         position: relative;
         display: inline-block;
-        margin-top: 3em;
         margin-bottom: round($base-spacing-unit / 2);
 
         text-transform: uppercase;
@@ -297,9 +296,6 @@ $base-spacing-unit: 29px;
       margin-bottom: 3em;
   }
 
-    .docs-example {
-        margin-bottom: $margin;
-    }
 
 
   p,
