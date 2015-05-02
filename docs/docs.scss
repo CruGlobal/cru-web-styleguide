@@ -509,11 +509,3 @@ body {
      margin-top: em(4px);
      margin-bottom: em(8px);
 }
-
-#focusedInput {
-    &,
-    &:focus {
-        border-color: #3eb1c8;
-        outline: 0;
-    }
-}
