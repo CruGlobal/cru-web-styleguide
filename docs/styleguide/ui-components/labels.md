@@ -2,5 +2,29 @@
 layout: page
 type: page-styleguide-components
 title: Labels
-excerpt: This lists the primary and secondary color palettes as described in the Brand Guidelines PDF and in <a href="https://github.com/CruGlobal/crubrand/blob/master/variables/_colors.scss">_colors.scss</a>.
 ---
+
+## Contents
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+## Example
+
+{% example html %}
+<h1>Example heading <span class="label label-default">New</span></h1>
+<h2>Example heading <span class="label label-default">New</span></h2>
+<h3>Example heading <span class="label label-default">New</span></h3>
+<h4>Example heading <span class="label label-default">New</span></h4>
+{% endexample %}
+
+## Variations
+
+{% example html %}
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+{% endexample %}
