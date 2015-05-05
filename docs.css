@@ -6705,7 +6705,7 @@ button.close {
 .listUi-item,
 .listUi > li {
   padding: 29px;
-  border-bottom-width: 29px;
+  border-bottom-width: 1px;
 }
 
 /*------------------------------------*\
