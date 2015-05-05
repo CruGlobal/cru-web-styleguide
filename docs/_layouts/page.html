@@ -11,11 +11,14 @@ layout: default
         {% if page.type == "page-styleguide-components" %}
             {% include sidenav-components.html %}
         {% endif %}
+        {% if page.type == "page-styleguide-utilities" %}
+            {% include sidenav-utilities.html %}
+        {% endif %}
         {% if page.type == "page-documentation-general" %}
             {% include sidenav-general.html %}
         {% endif %}
         {% if page.type == "page-documentation-js" %}
-        
+
         {% endif %}
         {% if page.type == "page-documentation-layouts" %}
             {% include sidenav-layouts.html %}
