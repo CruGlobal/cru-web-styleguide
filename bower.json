@@ -17,6 +17,6 @@
   "dependencies": {
     "octicons": "*",
     "primer-markdown": "https://github.com/primer/markdown.git#2.1.7",
-    "crubrand": "1.2.0"
+    "crubrand": "1.2.1"
   }
 }
