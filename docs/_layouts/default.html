@@ -54,6 +54,9 @@
                 {% if page.type == "page-styleguide-components" %}
                     UI Components
                 {% endif %}
+                {% if page.type == "page-styleguide-utilities" %}
+                    CSS Utilities
+                {% endif %}
                 {% if page.type == "page-documentation-general" %}
                     General Principles
                 {% endif %}
@@ -74,12 +77,15 @@
                 {% endif %}
                 </h2>
             <ul class="listInline  u-floatRight  subNav">
-                {% if page.type == "page-styleguide-design" or  page.type == "page-styleguide-components" %}
+                {% if page.type == "page-styleguide-design" or  page.type == "page-styleguide-components" or page.type == "page-styleguide-utilities" %}
                 <li>
                     <a href="{{ site.baseurl }}/styleguide/design-elements/color-palette" class="secondaryNav-link  u-linkClean {% if page.type == "page-styleguide-design" %} is-active{% endif %}">Design Elements</a>
                 </li>
                 <li>
                     <a href="{{ site.baseurl }}/styleguide/ui-components/alerts" class="secondaryNav-link  u-linkClean {% if page.type == "page-styleguide-components" %} is-active{% endif %}">UI Components</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/styleguide/css-utilities/classes/alignment" class="secondaryNav-link  u-linkClean {% if page.type == "page-styleguide-utilities" %} is-active{% endif %}">CSS Utilities</a>
                 </li>
                 {% endif %}
 
