@@ -286,6 +286,11 @@ $base-spacing-unit: 29px;
         font-weight: bold;
 
         @include font-size(12px, false);
+
+        .page--documentation-css & {
+            border-bottom: 1px solid $colorGrayscale-rock;
+            width: 100%;
+        }
     }
 
   .highlight + h2 {
@@ -294,7 +299,12 @@ $base-spacing-unit: 29px;
 
   > p:first-child {
       margin-bottom: 3em;
+
+      .page--documentation-css & {
+          margin-bottom: $margin;
+      }
   }
+
 
     .docs-example {
         margin-bottom: $base-spacing-unit;
