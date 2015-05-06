@@ -4,7 +4,7 @@ type: page-styleguide-design
 title: Icons
 ---
 
-We use SVGs for these icons. They are included individually as background images. Fallback png Data URIs will be used for browsers that do not support SGV's.
+We use SVGs for these icons. They are included individually as background images. Fallback png Data URIs will be used for browsers that do not support SVG's.
 
 ## Contents
 
