@@ -509,3 +509,12 @@ body {
      margin-top: em(4px);
      margin-bottom: em(8px);
 }
+
+.docs-example {
+    position: relative;
+}
+
+.docs-example .navbar-fixed-top,
+.docs-example .navbar-fixed-bottom {
+    position: relative;
+}
