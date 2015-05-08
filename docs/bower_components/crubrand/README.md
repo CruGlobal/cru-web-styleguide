@@ -17,9 +17,26 @@ The recommended installation method is Bower, but you can install the project vi
 
 ### Install using Bower:
 
+If you already have an existing `bower.json` file, run the following command:
+
     $ bower install --save crubrand
 
-Once installed, `@import` into your project:
+Otherwise, create a bower project. If you are not sure what to enter in the prompts, use the default values (by hitting return):
+
+    $ bower init
+
+After installing the project, install crubrand as a dependency:
+
+    $ bower install --save crubrand
+    
+You can change the release number to meet your needs. For more information about release numbers see [this project](https://github.com/npm/node-semver)
+
+When needed you can update cruband using Bower. You may need to change the release number in the `bower.json` file
+if you are updating to a new version.
+
+    bower update
+
+Once installed, `@import` into your project's main scss file:
 
     @import "bower_components/crubrand/crubrand";
 
@@ -37,7 +54,3 @@ The least recommended option for installation is to simply download
 `crubrand` into your project and `@import` it into your project.
 
     @import "crubrand/crubrand";
-
-## Updating crubrand using Bower
-
-    bower update crubrand
