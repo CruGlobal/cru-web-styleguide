@@ -145,8 +145,3 @@ If there is no panel body, the component moves from panel header to table withou
   </table>
 </div>
 {% endexample %}
-
-##
-
-{% example html %}
-{% endexample %}

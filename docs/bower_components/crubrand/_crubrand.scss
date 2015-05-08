@@ -174,9 +174,8 @@
 
 /* Crubrand variation of bootstrap's pagination */
 @import "bootstrap-variations/pagination";
+@import "bootstrap-variations/pager";
 
-
-@import "../bootstrap-sass-official/assets/stylesheets/bootstrap/pager";
 @import "../bootstrap-sass-official/assets/stylesheets/bootstrap/labels";
 @import "../bootstrap-sass-official/assets/stylesheets/bootstrap/badges";
 @import "../bootstrap-sass-official/assets/stylesheets/bootstrap/jumbotron";
@@ -203,6 +202,7 @@
 @import "modules/cruicons";
 @import "modules/layout";
 @import "modules/list-bare";
+@import "modules/list-decimal";
 @import "modules/list-inline";
 @import "modules/list-block";
 @import "modules/list-ui";

@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    #LIST-DECIMAL
+\*------------------------------------*/
+
+/**
+ * The list-decimal module simply adds decimal numbers to lists.
+ */
+.listDecimal,
+%listDecimal {
+  list-style-type: decimal;
+}

@@ -408,17 +408,21 @@ $pagination-active-border: $btn-subtle-state-border;
 //== Pager
 //
 //##
+$pager-color:           $pagination-color;
+$pager-bg:              $pagination-bg;
+$pager-border:          $pagination-border;
 
-$pager-bg:             $pagination-bg;
-$pager-border:         $pagination-border;
-$pager-border-radius:  2px;
+$pager-hover-color:     $pagination-hover-color;
+$pager-hover-bg:        $pagination-hover-bg;
+$pager-hover-border:    $pagination-hover-border;
 
-$pager-hover-bg:       $pagination-hover-bg;
+$pager-active-color:    $pagination-active-color;
+$pager-active-bg:       $pagination-active-bg;
+$pager-active-color:    $pagination-active-color;
 
-$pager-active-bg:      $pagination-active-bg;
-$pager-active-color:   $pagination-active-color;
-
-$pager-disabled-color: $pagination-disabled-color;
+$pager-disabled-color:  $pagination-disabled-color;
+$pager-disabled-bg:     $pagination-disabled-bg;
+$pager-disabled-border: $pagination-disabled-border;
 
 
 
