@@ -4,7 +4,7 @@ type: page-styleguide-components
 title: Input Groups
 ---
 
-Extend form controls by adding text or buttons before, after, or on both sides of any text-based `<input>`. Use .input-group with an .input-group-addon to prepend or append elements to a single `.form-control`.
+Extend form controls by adding text or buttons before, after, or on both sides of any text-based `<input>`. Use `.input-group` with an `.input-group-addon` to prepend or append elements to a single `.form-control`.
 
 ## Contents
 
