@@ -5281,8 +5281,8 @@ tbody.collapse.in {
 .pagination li {
   display: inline;
 }
-.pagination li a,
-.pagination li span {
+.pagination li > a,
+.pagination li > span {
   position: relative;
   padding: 8px 14px;
   line-height: 1.8125;
@@ -5386,12 +5386,15 @@ tbody.collapse.in {
 .pager li > span {
   display: inline-block;
   padding: 5px 14px;
+  color: #6d6e71;
   background-color: #f4f4f4;
   border: 1px solid #e7e7e7;
   border-radius: 2px;
+  transition: all 0.2s ease;
 }
 .pager li > a:hover,
 .pager li > a:focus {
+  color: #fff;
   text-decoration: none;
   background-color: #666062;
 }
@@ -5408,7 +5411,8 @@ tbody.collapse.in {
 .pager .disabled > a:focus,
 .pager .disabled > span {
   color: #777777;
-  background-color: #f4f4f4;
+  background-color: #fff;
+  border-color: #ddd;
   cursor: not-allowed;
 }
 
@@ -6641,6 +6645,16 @@ button.close {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/*------------------------------------*\
+    #LIST-DECIMAL
+\*------------------------------------*/
+/**
+ * The list-decimal module simply adds decimal numbers to lists.
+ */
+.listDecimal {
+  list-style-type: decimal;
 }
 
 /*------------------------------------*\

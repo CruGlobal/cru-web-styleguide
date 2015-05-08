@@ -359,15 +359,19 @@
         <script src="/cru-web-styleguide/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
         <script src="/cru-web-styleguide/js/anchor.min.js"></script>
         <script>
-        $(function() {
-            $(".js-nav-open").click(function(){
-                $("html").toggleClass("is-open--nav");
+            $(function() {
+                $(".js-nav-open").click(function(){
+                    $("html").toggleClass("is-open--nav");
+                });
+
+                $(".js-overlay").click(function(){
+                    $("html").removeClass("is-open--nav");
+                });
             });
 
-            $(".js-overlay").click(function(){
-                $("html").removeClass("is-open--nav");
+            $(function() {
+                $('.page--ui-popovers .btn-subtle').popover();
             });
-        });
         </script>
         <script>
         var selector = '.markdown-body h2, .markdown-body h3';

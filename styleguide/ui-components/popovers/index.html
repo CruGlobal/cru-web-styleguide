@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon-precomposed" href="/cru-web-styleguide/img/apple-touch-icon-precomposed.png">
     <link rel="icon" href="/cru-web-styleguide/favicon.ico">
   </head>
-  <body class="page  ">
+  <body class="page  page--ui-popovers">
 
     <header class="navbar  navbar-default  siteHeader">
         <hgroup class="titleGroup  navbar-header">
@@ -133,10 +133,47 @@
         <div class="panel  panel-default  p">
             <h1 class="page-title  styleguide-intro">Popovers</h1>
             
-                <p>This lists the primary and secondary color palettes as described in the Brand Guidelines PDF and in <a href="https://github.com/CruGlobal/crubrand/blob/master/variables/_colors.scss">_colors.scss</a>.</p>
+                <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information. Popovers whose both title and content are zero-length are never displayed.</p>
             
             <div class="markdown-body">
-                
+                <h2 id="contents">Contents</h2>
+<ul id="markdown-toc">
+  <li><a href="#contents">Contents</a></li>
+</ul>
+
+<div class="docs-example clearfix"><button type="button" class="btn  btn-subtle" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on left
+</button>
+
+<button type="button" class="btn  btn-subtle" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on top
+</button>
+
+<button type="button" class="btn  btn-subtle" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on bottom
+</button>
+
+<button type="button" class="btn  btn-subtle" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on right
+</button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn  btn-subtle"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+  Popover on left
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn  btn-subtle"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+  Popover on top
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn  btn-subtle"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"bottom"</span> <span class="na">data-content=</span><span class="s">"Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+  Popover on bottom
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn  btn-subtle"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+  Popover on right
+<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
 
             </div>
         </div>
@@ -362,15 +399,19 @@
         <script src="/cru-web-styleguide/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
         <script src="/cru-web-styleguide/js/anchor.min.js"></script>
         <script>
-        $(function() {
-            $(".js-nav-open").click(function(){
-                $("html").toggleClass("is-open--nav");
+            $(function() {
+                $(".js-nav-open").click(function(){
+                    $("html").toggleClass("is-open--nav");
+                });
+
+                $(".js-overlay").click(function(){
+                    $("html").removeClass("is-open--nav");
+                });
             });
 
-            $(".js-overlay").click(function(){
-                $("html").removeClass("is-open--nav");
+            $(function() {
+                $('.page--ui-popovers .btn-subtle').popover();
             });
-        });
         </script>
         <script>
         var selector = '.markdown-body h2, .markdown-body h3';
