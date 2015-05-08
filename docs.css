@@ -6711,11 +6711,6 @@ button.close {
 /*------------------------------------*\
     #PAGINATION
 \*------------------------------------*/
-.pagination li {
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
 /**
  * This is to override bootstraps specifity of pagiation. Normally this
  * level of nesting would not be allowed.
@@ -6764,25 +6759,23 @@ button.close {
   background-color: #6d6e71;
 }
 
-.pagination__prev {
-  float: left;
-}
-
-.pagination__next {
-  float: right;
-}
-
-.pagination__prev a:before,
-.pagination__next a:after {
+.pagination-prev:before,
+.pagination-next:after,
+.pager-prev:before,
+.pager-next:after {
   font-size: 20px;
 }
 
-.pagination__prev a:before {
-  content: "\00AB" "\00A0";
+.pager-prev:before,
+.pagination-prev:before {
+  content: "\2190";
+  margin-right: 0.4em;
 }
 
-.pagination__next a:after {
-  content: "\00A0" "\00BB";
+.pager-next:after,
+.pagination-next:after {
+  content: "\2192";
+  margin-left: 0.4em;
 }
 
 /*------------------------------------*\
@@ -8408,11 +8401,18 @@ button.close {
   font-size: 12px;
   font-size: 0.75rem;
 }
+.page--documentation-css .markdown-body > h2 {
+  border-bottom: 1px solid #b9b9b9;
+  width: 100%;
+}
 .markdown-body .highlight + h2 {
   margin-top: 5em;
 }
 .markdown-body > p:first-child {
   margin-bottom: 3em;
+}
+.page--documentation-css .markdown-body > p:first-child {
+  margin-bottom: 16px;
 }
 .markdown-body .docs-example {
   margin-bottom: 29px;
@@ -8446,6 +8446,10 @@ button.close {
 }
 .markdown-body .docs-example .input-group {
   margin-bottom: 16px;
+}
+.markdown-body .docs-example .nav {
+  padding-left: 0;
+  margin-bottom: 0;
 }
 .markdown-body ul ul,
 .markdown-body ul ol,
@@ -9097,4 +9101,13 @@ body {
 .styleguide-intro {
   margin-top: 0.25em;
   margin-bottom: 0.5em;
+}
+
+.docs-example {
+  position: relative;
+}
+
+.docs-example .navbar-fixed-top,
+.docs-example .navbar-fixed-bottom {
+  position: relative;
 }

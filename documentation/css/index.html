@@ -103,11 +103,10 @@
             <h1 class="page-title  styleguide-intro">CSS</h1>
             
             <div class="markdown-body">
-                <p>Cru's naming conventions are adapted from the work being done in Nicolas Gallagher's SUITCSS. Which is to say, it relies on structured, meaningful class names. This is to help work around the current limits of applying CSS to the DOM (i.e., the lack of style encapsulation) and to better communicate the relationships between classes. We also heaviliy rely on the pricimples taught by Harry Roberts in Guideline.es.</p>
-<p>We are currently using Bootstrap as our foundation because it does much of the heavy lifting for us. We have adapted it to best fit our uses and eliminate extraneous code. Our basic build can be installed as a bower package, which includes Bootstrap, with our variable overrides and other changes.</p>
-<p>Our primary goal is to create a scalable, maintainable and reusable css. Here is a <a href="https://github.com/davidtheclark/scalable-css-reading-list"></a>
-[Scalable CSS Reading List](https://github.com/davidtheclark/scalable-css-reading-list): take a
-look.</p>
+                <p>Cru uses <a href="http://sass-lang.com/">SCSS</a> for CSS generation</p>
+<p>Cru's naming conventions are adapted from the work being done in Nicolas Gallagher's <a href="https://github.com/suitcss/suit/tree/master/doc">SUITCSS</a>. Which is to say, it relies on structured, meaningful class names. This is to help work around the current limits of applying CSS to the DOM (i.e., the lack of style encapsulation) and to better communicate the relationships between classes. We also heavily rely on the principles taught by Harry Roberts in <a href="http://cssguidelin.es/">Guideline.es</a>.</p>
+<p>We are currently using <a href="http://getbootstrap.com/">Bootstrap</a> as our foundation because it does much of the heavy lifting for us. We have adapted it to best fit our uses and eliminate extraneous code. <a href="https://github.com/CruGlobal/crubrand">Our basic build can be installed as a bower package</a>, which includes Bootstrap, with our variable overrides and other changes.</p>
+<p>Our primary goal is to create a scalable, maintainable and reusable css. Here is a <a href="https://github.com/davidtheclark/scalable-css-reading-list">Scalable CSS Reading List</a> take a look.</p>
 
 <h2 id="contents">Contents</h2>
 
@@ -164,17 +163,16 @@ look.</p>
 <p>While SASS can be a powerful tool in the right hands, in the wrong hands you can end up with
 selectors like this:</p>
 
-<p><code>
-body.getaways-gallery-gig .page_header #filters #categories_filter
+<pre><code>body.getaways-gallery-gig .page_header #filters #categories_filter
 .pane .categories_container .categories ul li.selectBox-selected a {
 color: #333;
 }
-</code></p>
+</code></pre>
 
 <p>Because of the ease of nesting in preprocessors like SASS, inexperienced devs
 will often nest like crazy without understanding the ramifications on the
 compiled code. This adds a ton of unnecessary specificity that requires the
-same selector to override or worse, using !important. (Sometimes times devs will even resort
+same selector to override or worse, using <code>!important</code>. (Sometimes times devs will even resort
 to inline styles! Ewww.)</p>
 
 <h2 id="document-anatomy">Document Anatomy</h2>
@@ -184,7 +182,7 @@ commenting, consistent syntax and consistent naming.</p>
 
 <h3 id="general">General</h3>
 <p>Limit your stylesheets to a maximum 80 character width where possible. Exceptions may be gradient
-syntax and URLs in comments. Thereâ€™s nothing we can do about those.</p>
+syntax and URLs in comments. There’s nothing we can do about those.</p>
 
 <h3 id="single-file-vs-many-files">Single file vs. many files</h3>
 
@@ -234,83 +232,84 @@ component or class name.</p>
 
 <p>Be sure to write in complete sentences for larger comments and succinct phrases for general notes.</p>
 
-<p><strong>Bad Example:</strong>
-<code>
-/* Modal header */
-.modal-header {
-  ...
-}
-</code></p>
+<p><strong>Bad Example:</strong></p>
 
-<p><strong>Good Example:</strong>
-<code>
-/* Wrapping element for .modal-title and .modal-close */
+<pre><code>/* Modal header */
 .modal-header {
   ...
 }
-</code></p>
+</code></pre>
+
+<p><strong>Good Example:</strong></p>
+
+<pre><code>/* Wrapping element for .modal-title and .modal-close */
+.modal-header {
+  ...
+}
+</code></pre>
 
 <h2 id="file-structure">File Structure</h2>
 
-<p>The typcial file structure of a project will look like:</p>
+<p>The typical file structure of a project will look like:</p>
 
-<p>```
-bower_components/
-â”œâ”€â”€ crubrand/
-â”‚   â”œâ”€â”€ bootstrap-variations/
-â”‚   â”œâ”€â”€ bourbon/
-â”‚   â”œâ”€â”€ components/
-â”‚   â”œâ”€â”€ elements/
-â”‚   â”œâ”€â”€ generic/
-â”‚   â”œâ”€â”€ ie/
-â”‚   â”œâ”€â”€ variables/
-â”‚   â”œâ”€â”€ _crubrand.scss
-â”‚   â”œâ”€â”€ _overrides.scss
-â”‚   â””â”€â”€ _settings.scss</p>
+<pre><code>bower_components/
+├── crubrand/
+│   ├── bootstrap-variations/
+│   ├── bourbon/
+│   ├── components/
+│   ├── elements/
+│   ├── generic/
+│   ├── ie/
+│   ├── variables/
+│   ├── _crubrand.scss
+│   ├── _overrides.scss
+│   └──_settings.scss
 
-<p>[projectname]-scss/
-â”œâ”€â”€ bootstrap-replacement/
-â”‚   â”œâ”€â”€ …
-â”‚   â””â”€â”€ …
-â”œâ”€â”€ ie/
-â”‚   â”œâ”€â”€ …
-â”‚   â””â”€â”€ …
-â”œâ”€â”€ …
-â”œâ”€â”€ …
-â”œâ”€â”€ projectname.ie.scss
-â””â”€â”€ projectname.scss
-```</p>
+[projectname]-scss/
+├── bootstrap-replacement/
+│   ├── ...
+│   ├── ...
+├── ie/
+│   ├── ...
+│   └── ...
+├── ...
+├── ...
+├── projectname.ie.scss
+└── projectname.scss
+</code></pre>
 
 <h2 id="declarations">Declarations</h2>
 
 <h3 id="property-order">Property Order</h3>
 
-<p>Properties should be organized in the following order:
-  1. Extends
-  2. Empty Mixins
-  3. Positioning
-  4. Display and Box Model
-  5. Color
-  6. Text
-  7. Other
-  8. Mixins
-  9. Media Queries
-  10. Nested Properties.</p>
+<p>Properties should be organized in the following order:</p>
 
-<p>```
-.selector {
+<ol>
+  <li>Extends</li>
+  <li>Empty Mixins</li>
+  <li>Positioning</li>
+  <li>Display and Box Model</li>
+  <li>Color</li>
+  <li>Text</li>
+  <li>Other</li>
+  <li>Mixins</li>
+  <li>Media Queries</li>
+  <li>Nested Properties.</li>
+</ol>
+
+<pre><code>.selector {
   /* Extend */
-  @extend %component;</p>
+  @extend %component;
 
-<p>@include clearfix;</p>
+  @include clearfix;
 
-<p>/* Positioning */
+  /* Positioning */
   position: absolute;
   z-index: 10;
   top: 0;
-  right: 0;</p>
+  right: 0;
 
-<p>/* Display &amp; Box Model */
+  /* Display &amp; Box Model */
   display: inline-block;
   overflow: hidden;
   box-sizing: border-box;
@@ -318,33 +317,33 @@ bower_components/
   height: 100px;
   padding: 10px;
   border: 10px solid #333;
-  margin: 10px;</p>
+  margin: 10px;
 
-<p>/* Color */
+  /* Color */
   background: #000;
-  color: #fff</p>
+  color: #fff
 
-<p>/* Text */
+  /* Text */
   font-family: sans-serif;
   line-height: 1.4;
-  text-align: right;</p>
+  text-align: right;
 
-<p>/* Other */
-  cursor: pointer;</p>
+  /* Other */
+  cursor: pointer;
 
-<p>/* Mixins */
-  @include font-size(16px);</p>
+  /* Mixins */
+  @include font-size(16px);
 
-<p>/* Media query mixin */
+  /* Media query mixin */
   @include mq (800px) {
-    …
-  }</p>
+    ...
+  }
 
-<p>.selector-child{
-    …
+  .selector-child{
+    ...
   }
 }
-```</p>
+</code></pre>
 
 <h3 id="single-declarations">Single Declarations</h3>
 
@@ -352,24 +351,23 @@ bower_components/
 readability and faster editing. Any rule set with multiple declarations should be split to separate
 lines.</p>
 
-<p>The key factor here is error detectionâ€”e.g., a CSS validator stating you have a syntax error on
+<p>The key factor here is error detection – e.g., a CSS validator stating you have a syntax error on
 Line 183. With a single declaration, there’s no missing it. With multiple declarations, separate
 lines is a must for your sanity.</p>
 
-<p>```
-/* Single declarations on one line */
+<pre><code>/* Single declarations on one line */
 .one-third { width: 33.333%; }
 .one-half { width: 50%; }
-.one-whole { width: 100%; }</p>
+.one-whole { width: 100%; }
 
-<p>/* Multiple declarations, one per line */
+/* Multiple declarations, one per line */
 .sprite {
   display: inline-block;
   width: 16px;
   height: 15px;
   background-image: url(../img/sprite.png);
 }
-```</p>
+</code></pre>
 
 <h3 id="shorthand-notation">Shorthand Notation</h3>
 
@@ -393,26 +391,26 @@ unintended side effects.</p>
 <p>The Mozilla Developer Network has <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">a great article on shorthand properties</a> for those
 unfamiliar with notation and behavior.</p>
 
-<p><strong>Bad Example</strong>
-<code>
-.element {
+<p><strong>Bad Example</strong></p>
+
+<pre><code>.element {
   margin: 0 0 10px;
   background: red;
   background: url("image.jpg");
   border-radius: 3px 3px 0 0;
 }
-</code></p>
+</code></pre>
 
-<p><strong>Good Example</strong>
-<code>
-.element {
+<p><strong>Good Example</strong></p>
+
+<pre><code>.element {
   margin-bottom: 10px;
   background-color: red;
   background-image: url("image.jpg");
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
-</code></p>
+</code></pre>
 
 <h2 id="formatting">Formatting</h2>
 <p>The following are some high level page formatting style rules.</p>
@@ -420,43 +418,43 @@ unfamiliar with notation and behavior.</p>
 <h3 id="spacing">Spacing</h3>
 <p>CSS rules should be comma separated but live on new lines:</p>
 
-<p><strong>Correct:</strong>
-<code>
-.content,
-.content-edit {
-  â€¦
-}
-</code></p>
+<p><strong>Correct:</strong></p>
 
-<p><strong>Incorrect:</strong>
-<code>
-.content, .content-edit {
-  â€¦
+<pre><code>.content,
+.content-edit {
+  ...
 }
-</code></p>
+</code></pre>
+
+<p><strong>Incorrect:</strong></p>
+
+<pre><code>.content, .content-edit {
+  ...
+}
+</code></pre>
 
 <p>CSS blocks should be separated by a single new line. Not two. Not 0.</p>
 
-<p><strong>Correct:</strong>
-```
-.content {
-  â€¦
-}</p>
+<p><strong>Correct:</strong></p>
 
-<p>.content-edit {
-  â€¦
+<pre><code>.content {
+  ...
 }
-```</p>
 
-<p><strong>Incorrect:</strong>
-<code>
-.content {
-  â€¦
+.content-edit {
+  ...
+}
+</code></pre>
+
+<p><strong>Incorrect:</strong></p>
+
+<pre><code>.content {
+  ...
 }
 .content-edit {
-  â€¦
+  ...
 }
-</code></p>
+</code></pre>
 
 <h3 id="whitespace-and-punctuation">Whitespace and Punctuation</h3>
 
@@ -465,12 +463,12 @@ unfamiliar with notation and behavior.</p>
     <p>Indent using 4 soft tabs. [Indentation]</p>
   </li>
   <li>
-    <p>End each file with an empty newline. After all, youâ€™re not an animal, are you? [FinalNewline]</p>
+    <p>End each file with an empty newline. After all, you’re not an animal, are you? [FinalNewline]</p>
   </li>
   <li>
-    <p>Include an empty line between all statements â€” i.e. rule sets, at-rules, and Sass directives.
+    <p>Include an empty line between all statements i.e. rule sets, at-rules, and Sass directives.
 Even the nested ones. Spaces help people, and people are important. (Variable definitions are
-like properties and donâ€™t need to be spaced.) [EmptyLineBetweenBlocks]</p>
+like properties and don’t need to be spaced.) [EmptyLineBetweenBlocks]</p>
   </li>
   <li>
     <p>Include spaces after commas and colons, not before. As in written English. [SpaceAfterComma, SpaceAfterPropertyColon,SpaceAfterPropertyName]</p>
@@ -492,15 +490,14 @@ is visually clearer that the string is not a selector or a style property. [Stri
 <p>syntax: <code>js-&lt;targetName&gt;</code></p>
 
 <p>JavaScript-specific classes reduce the risk that changing the structure or theme of components
-will inadvertently affect any required JavaScript behaviour and complex functionality. It is
-not neccesarry to use them in every case, just think of them as a tool in your utility belt. If
-you are creating a class, which you dont intend to use for styling, but instead only as a
+will inadvertently affect any required JavaScript behavior and complex functionality. It is
+not necessary to use them in every case, just think of them as a tool in your utility belt. If
+you are creating a class, which you don’t intend to use for styling, but instead only as a
 selector in JavaScript, you should probably be adding the <code>js-</code> prefix. In practice this looks
 like this:</p>
 
-<p><code>
-&lt;a href="/login" class="btn  btn-primary  js-login"&gt;&lt;/a&gt;
-</code></p>
+<pre><code>&lt;a href="/login" class="btn  btn-primary  js-login"&gt;&lt;/a&gt;
+</code></pre>
 
 <p><strong>Again, JavaScript-specific classes should not, under any circumstances, be styled</strong>.</p>
 
@@ -517,7 +514,7 @@ For example: floats, containing floats, vertical alignment, text truncation. Rel
 can help to reduce repetition and provide consistent implementations.</p>
 
 <p>Utilities are complete single responsibility rules which have a very specific and targeted task.
-It is also quite common for these rulesâ€™ declarations to carry !important so as to guarantee
+It is also quite common for these rules’ declarations to carry <code>!important</code> so as to guarantee
 they beat other less specific ones. They do one thing in a very heavy-handed and inelegant way.
 They are to be used as a last resort when no other CSS hooks are available, or to tackle
 completely unique circumstances, e.g. using <code>.u-text-center</code> to centrally align one piece of text
@@ -547,37 +544,36 @@ and modifications.</li>
 
 <p>We use a modified version of the SUIT BEM naming convention.</p>
 
-<p>```
-/**
+<pre><code>/**
  * The top-level â€˜Blockâ€™ of a component.
  */
-.modal {}</p>
+.modal {}
 
-<p>/**
+  /**
    * An â€˜Elementâ€™ that is a part of the larger Block.
    */
-  .modal-title {}</p>
+  .modal-title {}
 
-<p>/**
+/**
  * A â€˜Modifierâ€™ of the Block.
  */
-.modal–large {}
-```<br />
-In our CSS, this naming isnâ€™t all that useful, but when we see it in out HTML we get a much
-better view of whatâ€™s going on:</p>
+.modal--large {}
+</code></pre>
 
-<p>```
-&lt;div class="modal  modal--large"&gt;</p>
+<p>In our CSS, this naming isn’t all that useful, but when we see it in out HTML we get a much
+better view of what’s going on:</p>
 
-<h1 class="modal-title">Sign into your account</h1>
+<pre><code>&lt;div class="modal  modal--large"&gt;
 
-<div class="modal-content">
-    <form class="form-login">
-    </form>
-  </div>
+  &lt;h1 class="modal-title"&gt;Sign into your account&lt;/h1&gt;
 
-<p>&lt;/div&gt;
-```</p>
+  &lt;div class="modal-content"&gt;
+    &lt;form class="form-login"&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
 
 <p>We can see from this that we have a number of classes all relating to our <code>.modal</code>, and a class
 of <code>.form-login</code> which begins a brand new context.</p>
@@ -592,17 +588,15 @@ on <code>.modal</code>, and therefore cannot be used without that .modal class a
 
 <p>The component’s name must be written in camel case. This is the top-level of a component.</p>
 
-<p><code>
-.myComponent {
+<pre><code>.myComponent {
     /* ... */
 }
-</code></p>
 
-<p><code>
+
 &lt;div class="myComponent"&gt;
   ...
 &lt;/div&gt;
-</code></p>
+</code></pre>
 
 <h3 id="componentname--modifiername">componentname–modifierName</h3>
 
@@ -610,23 +604,21 @@ on <code>.modal</code>, and therefore cannot be used without that .modal class a
 Modifier names must be written in camel case and be separated from the component name by two
 hyphens. The class should be included in the HTML in addition to the base component class.</p>
 
-<p>```
-/* Core button <em>/
+<pre><code>/* Core button */
 .btn {
-    /</em> â€¦ */
-}</p>
-
-<p>/* Default button style <em>/
-.btn–default {
-    /</em> â€¦ */
+    /* ... */
 }
-````</p>
 
-<p><code>
+/* Default button style */
+.btn--default {
+    /* ... */
+}
+
+
 &lt;div class="btn  btn--default"&gt;
   ...
 &lt;/div&gt;
-</code></p>
+</code></pre>
 
 <h3 id="componentname-descendantname">componentname-descendantName</h3>
 
@@ -644,54 +636,50 @@ be used as an adjoining class.</strong></p>
 contexts, but every component must define its own styles for the state (as they are scoped to
 the component).</p>
 
-<p>```
-.dropdown {
-  /* â€¦ */
-}</p>
-
-<p>.dropdown.is-open {
-  /* â€¦ */
+<pre><code>.dropdown {
+  /* ... */
 }
-```</p>
 
-<p><code>
+.dropdown.is-open {
+  /* ... */
+}
+
 &lt;ul class="dropdown  is-open"&gt;
   ...
 &lt;/ul&gt;
-</code></p>
+</code></pre>
 
 <h2 id="variables">Variables</h2>
 
 <h3 id="colors">colors</h3>
 
-<p>When implementing feature styles, you should only be using color variables provided by _colors.scss
-found in crubrand.</p>
+<p>When implementing feature styles, you should only be using color variables provided by<code> _colors.scss</code>
+found in <a href="https://github.com/CruGlobal/crubrand">crubrand</a>.</p>
 
-<p>When adding a color variable to _colors.scss, using hex color units are preferred over RGB and RGBA,
+<p>When adding a color variable to <code>_colors.scss</code>, using hex color units are preferred over RGB and RGBA,
 named, HSL, or HSLA values. We also prefer to shorten hex values whenever possible</p>
 
 <p>Color variables should use the naming convention <code>color-[nameOfColor]</code></p>
 
-<p><strong>Correct:</strong>
-<code>
-#fff;
-#3a3a3a;
-</code></p>
+<p><strong>Correct:</strong></p>
 
-<p><strong>Incorrect:</strong>
-```
-#ffffff;
+<pre><code>#fff;
+#3a3a3a;
+</code></pre>
+
+<p><strong>Incorrect:</strong></p>
+
+<pre><code>#ffffff;
 rgb(50, 50, 50);
 rgba(50, 50, 50, 0.2);
 white;
 hsl(120, 100%, 50%);
-hsla(120, 100%, 50%, 1);</p>
-
-<p>```</p>
+hsla(120, 100%, 50%, 1);
+</code></pre>
 
 <h3 id="z-index">z-index</h3>
 
-<p>Please use the z-index scale defined in _z-index.scss found in crubrand.</p>
+<p>Please use the z-index scale defined in <code>_z-index.scss</code> found in <a href="https://github.com/CruGlobal/crubrand">crubrand</a>.</p>
 
 <p><code>$zIndex-1 - $zIndex-9</code> are provided. Nothing should be higher then <code>$zIndex-9</code>.</p>
 
@@ -715,23 +703,22 @@ hsla(120, 100%, 50%, 1);</p>
 separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss
 them in the future. Here’s a typical setup.</p>
 
-<p><strong>Correct:</strong>
-<code>
-.componentName {
+<p><strong>Correct:</strong></p>
+
+<pre><code>.componentName {
     @media (min-width: 480px) {
       /* ... */
     }
 }
-</code></p>
+</code></pre>
 
-<p><strong>Incorrect:</strong>
-```
-@media (min-width: 480px) {
-    .componentName{ /* … <em>/ }
-    .anotherComponent{ /</em> … */ }
-}</p>
+<p><strong>Incorrect:</strong></p>
 
-<p>```</p>
+<pre><code>@media (min-width: 480px) {
+    .componentName{ /* ... */ }
+    .anotherComponent{ /* ... */ }
+}
+</code></pre>
 
 <h2 id="performance">Performance</h2>
 
@@ -740,9 +727,8 @@ them in the future. Here’s a typical setup.</p>
 <p>Although in the name (cascading style sheets), cascading can introduce unnecessary performance
 overhead for applying styles. Take the following example:</p>
 
-<p><code>
-  ul.user-list li span a:hover { color: red; }
-</code></p>
+<pre><code>ul.user-list li span a:hover { color: red; }
+</code></pre>
 
 <p>Styles are resolved during the renderer’s layout pass. The selectors are resolved right to left,
 exiting when it has been detected the selector does not match. Therefore, in this example every a
@@ -756,26 +742,24 @@ should help explain the important concept of the key selector. Seemingly specifi
 are read from right to left. It needs to look up all the divs first (which could be thousands) then
 go up the DOM from there.</p>
 
-<p>If we know we want to give all a elements inside the .user-list red on hover we can simplify
+<p>If we know we want to give all a elements inside the <code>.user-list</code> red on hover we can simplify
 this style to:</p>
 
-<p><code>
-.user-list &gt; a:hover {
+<pre><code>.user-list &gt; a:hover {
   color: red;
 }
-</code></p>
+</code></pre>
 
-<p>If we want to only style specific a elements inside .user-list we can give them a specific class:</p>
+<p>If we want to only style specific a elements inside <code>.user-list</code> we can give them a specific class:</p>
 
-<p><code>
-.user-list &gt; .link-primary:hover {
+<pre><code>.user-list &gt; .link-primary:hover {
   color: red;
 }
-</code></p>
+</code></pre>
 
 <h3 id="layouts-and-paints">Layouts and Paints</h3>
 
-<p><a href="http://perfectionkills.com/profiling-css-for-fun-and-profit-optimization-notes/">Juriy Zaytsevâ€™s post on CSS profiling</a>
+<p><a href="http://perfectionkills.com/profiling-css-for-fun-and-profit-optimization-notes/">Juriy Zaytsev’s post on CSS profiling</a>
 profiles browsers on selector matching, layouts, paints, and parsing times of a complex app. It
 confirms the theory that highly specific selectors are bad for big apps. Harry Roberts of CSS
 Wizardry also wrote about <a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/">CSS selector performance</a>.</p>
