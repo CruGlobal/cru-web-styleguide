@@ -2,5 +2,30 @@
 layout: page
 type: page-styleguide-components
 title: Popovers
-excerpt: This lists the primary and secondary color palettes as described in the Brand Guidelines PDF and in <a href="https://github.com/CruGlobal/crubrand/blob/master/variables/_colors.scss">_colors.scss</a>.
+page-class: page--ui-popovers
+excerpt: Add small overlays of content, like those on the iPad, to any element for housing secondary information. Popovers whose both title and content are zero-length are never displayed.
 ---
+
+## Contents
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
+{% example html %}
+<button type="button" class="btn  btn-subtle" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on left
+</button>
+
+<button type="button" class="btn  btn-subtle" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on top
+</button>
+
+<button type="button" class="btn  btn-subtle" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on bottom
+</button>
+
+<button type="button" class="btn  btn-subtle" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on right
+</button>
+{% endexample %}
