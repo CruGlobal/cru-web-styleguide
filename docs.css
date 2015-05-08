@@ -9125,3 +9125,17 @@ body {
 .docs-example .navbar-fixed-bottom {
   position: relative;
 }
+
+.docs-callout {
+  border-left: 5px solid #eee;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.docs-callout-danger {
+  border-left-color: #ce4844;
+}
+
+.docs-callout-danger h4 {
+  color: #ce4844;
+}
