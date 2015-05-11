@@ -526,9 +526,17 @@ body {
 }
 
 .docs-callout-danger {
-    border-left-color: #ce4844;
+    border-left-color: $colorHighlight-danger;
 }
 
 .docs-callout-danger h4 {
-  color: #ce4844;
+  color: $colorHighlight-danger;
+}
+
+.docs-callout-warning {
+    border-left-color: $colorHighlight-warning;
+}
+
+.docs-callout-warning h4 {
+  color: $colorHighlight-warning;
 }

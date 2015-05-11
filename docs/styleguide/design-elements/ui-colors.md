@@ -43,7 +43,7 @@ This lists the ui colors as described in [_colors.scss](https://github.com/CruGl
             <ul class="listBlock swatch-details">
                 <li><strong>Info</strong></li>
                 <li>#5bc0de</li>
-                <li>$colorHelper-info</li>
+                <li>$colorHighlight-info</li>
             </ul>
         </div>
     </li>
@@ -53,7 +53,7 @@ This lists the ui colors as described in [_colors.scss](https://github.com/CruGl
             <ul class="listBlock swatch-details">
                 <li><strong>Success</strong></li>
                 <li>#5cb85c</li>
-                <li>$colorHelper-success</li>
+                <li>$colorHighlight-success</li>
             </ul>
         </div>
     </li>
@@ -64,7 +64,7 @@ This lists the ui colors as described in [_colors.scss](https://github.com/CruGl
             <ul class="listBlock swatch-details">
                 <li><strong>Warning</strong></li>
                 <li>#e89643</li>
-                <li>$colorHelper-warning</li>
+                <li>$colorHighlight-warning</li>
             </ul>
         </div>
     </li>
@@ -75,7 +75,7 @@ This lists the ui colors as described in [_colors.scss](https://github.com/CruGl
             <ul class="listBlock swatch-details">
                 <li><strong>Danger</strong></li>
                 <li>#d9534f</li>
-                <li>$colorHelper-danger</li>
+                <li>$colorHighlight-danger</li>
             </ul>
         </div>
     </li>
