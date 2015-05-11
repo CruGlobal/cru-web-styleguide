@@ -30,10 +30,10 @@ Look to the examples for applying these principles to your code.
 
 We use the following media queries in our Less files to create the key breakpoints in our grid system.
 
-<pre><code class=" language-sass" data-lang="scss">/* Extra small devices (phones, less than 768px) */
+<pre><code class=" language-sass" data-lang="scss">/* Extra small devices (phones, less than 550px) */
 /* No media query since this is the default in Bootstrap */
 
-/* Small devices (tablets, 768px and up) */
+/* Small devices (tablets, 550px and up) */
 @media (min-width: @screen-sm-min) { ... }
 
 /* Medium devices (desktops, 992px and up) */
@@ -60,11 +60,11 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
           <th></th>
           <th>
             Extra small devices
-            <small>Phones (&lt;768px)</small>
+            <small>Phones (&lt;550px)</small>
           </th>
           <th>
             Small devices
-            <small>Tablets (≥768px)</small>
+            <small>Tablets (≥550px)</small>
           </th>
           <th>
             Medium devices
@@ -334,7 +334,7 @@ Variables determine the number of columns, the gutter width, and the media query
 
 <div class="highlight"><pre><code class="language-html" data-lang="html">@grid-columns:              12;
 @grid-gutter-width:         30px;
-@grid-float-breakpoint:     768px;</code></pre></div>
+@grid-float-breakpoint:     550px;</code></pre></div>
 
 ### Mixins
 
