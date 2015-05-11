@@ -8489,27 +8489,6 @@ button.close {
   padding: 0 16px;
   margin-bottom: 16px;
 }
-.markdown-body table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: normal;
-  word-break: keep-all;
-}
-.markdown-body table th {
-  font-weight: bold;
-}
-.markdown-body table th, .markdown-body table td {
-  padding: 6px 13px;
-  border: 1px solid #ddd;
-}
-.markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-}
-.markdown-body table tr:nth-child(2n) {
-  background-color: #f8f8f8;
-}
 .markdown-body img {
   max-width: 100%;
   box-sizing: border-box;
@@ -8982,7 +8961,7 @@ body {
   left: 0;
 }
 
-@media screen and (min-width: 34.375em) {
+@media screen and (min-width: 62.125em) {
   .nav-open,
   .lunchMenu {
     display: none;
@@ -9133,9 +9112,17 @@ body {
 }
 
 .docs-callout-danger {
-  border-left-color: #ce4844;
+  border-left-color: #d9534f;
 }
 
 .docs-callout-danger h4 {
-  color: #ce4844;
+  color: #d9534f;
+}
+
+.docs-callout-warning {
+  border-left-color: #f0ad4e;
+}
+
+.docs-callout-warning h4 {
+  color: #f0ad4e;
 }
