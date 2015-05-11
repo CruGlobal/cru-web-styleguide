@@ -360,7 +360,7 @@ body {
 
 .nav-open,
 .lunchMenu {
-    @include mq(550px) {
+    @include mq(994px) {
         display: none
     }
 }
