@@ -15,7 +15,7 @@
     <meta name="author" content="">
 
     <title>
-      Development Principles &middot; Cru Styleguide
+      Guidelines &middot; Cru Styleguide
     </title>
     <script>
 /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
@@ -52,11 +52,11 @@
                 
                 
                 
-                    General Principles
                 
                 
                 
                 
+                    Git
                 
                 
                 </h2>
@@ -65,7 +65,7 @@
 
                 
                 <li>
-                    <a href="/cru-web-styleguide/documentation/general/principles" class="secondaryNav-link  u-linkClean  is-active">General Principles</a>
+                    <a href="/cru-web-styleguide/documentation/general/principles" class="secondaryNav-link  u-linkClean ">General Principles</a>
                 </li>
                 <li>
                     <a href="/cru-web-styleguide/documentation/css/" class="secondaryNav-link  u-linkClean ">CSS</a>
@@ -77,7 +77,7 @@
                     <a href="/cru-web-styleguide/documentation/icons/" class="secondaryNav-link  u-linkClean ">Icons</a>
                 </li>
                 <li>
-                    <a href="/cru-web-styleguide/documentation/git/workflow" class="secondaryNav-link  u-linkClean ">Git</a>
+                    <a href="/cru-web-styleguide/documentation/git/workflow" class="secondaryNav-link  u-linkClean  is-active">Git</a>
                 </li>
                 
                 
@@ -93,45 +93,40 @@
         
         
         
+        
+        
+        
             <nav class="card">
-    <a class="card-link  icon--link  is-active" href="/cru-web-styleguide/documentation/general/principles">Development Principles</a>
-    <a class="card-link  icon--link" href="/cru-web-styleguide/documentation/general/getting-started">Getting Started</a>
+    <a class="card-link  icon--link" href="/cru-web-styleguide/documentation/git/workflow">Workflow</a>
+    <a class="card-link  icon--link  is-active" href="/cru-web-styleguide/documentation/git/guidelines">Guidelines</a>
+    <a class="card-link  icon--link" href="/cru-web-styleguide/documentation/git/code-review">Code Review</a>
 </nav>
 
-        
-        
-        
         
     </div>
     
     <div class="pageContent markdown-body">
         <div class="panel  panel-default  p">
-            <h1 class="page-title  styleguide-intro">Development Principles</h1>
+            <h1 class="page-title  styleguide-intro">Guidelines</h1>
             
             <div class="markdown-body">
-                <p class="mb-">Cru has a huge codebase and this ultimately dictates many of the decisions we make around the front end architecture and day-to-day feature development.</p>
-
-<ul>
-  <li>Leave code in a better state than you found it</li>
-  <li>Reuse as much as possible: technologies and components</li>
-  <li>The entire code base should look like one person wrote it</li>
-  <li>Keep it simple</li>
-  <li>Ensure we can pivot away from a dependency/pattern</li>
+                <ul>
+  <li>
+    <p>Always work in a branch</p>
+  </li>
+  <li>
+    <p>Avoid unnecessary merges of master into your branch - if you are the only person working on your branch, rebase onto master instead. Use <code>git pull --rebase</code> to avoid commits like: Merge remote-tracking branch ‘origin/master’ into jd-feature.</p>
+  </li>
+  <li>
+    <p>Squash your commits into meaningful and (release/revert)able chunks.</p>
+  </li>
+  <li>
+    <p>Merge with –no-ff back into master when it has been code reviewed (or merge through a GUI; we use Tower).</p>
+  </li>
+  <li>
+    <p>Make your commit messages useful, no jokes. <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">Follow Git commit message best practices</a> as much as possible (first line should be a &lt;= 50 character summary of your changes, followed by a blank line and, if appropriate for larger changes, a detailed description wrapped to approx. 72 characters).</p>
+  </li>
 </ul>
-
-<h4 id="resuse-as-much-code-as-possible">Resuse as much code as possible</h4>
-<p>Our codebase is too large to hold in your head and there is no return in trying to do so. We have to break down the functionality of into simple modules which we compose into robust sites.</p>
-
-<h4 id="keep-things-simple">Keep things simple</h4>
-<p>More than anything, please try to follow existing patterns as much as possible. Inconsistency soon manifests as complexity and then technical debt. What we are aiming to build is a maintainable platform where developers can move between applications with very little up-front learning required. <a href="https://medium.com/@bentlegen/the-best-tool-for-the-job-isnt-always-6ed364f3f775">The best tool for the job, isn’t always</a> by Ben Vinegar covers this concept perfectly.</p>
-
-<p>Sometimes reusing code will take more initial work, but it shouldn’t be avoided. When building new features, try to identify reusable parts which can be abstracted into Crubrand to help other developers. Features not in Crubrand are inherently harder to find and thus reuse.</p>
-
-<h4 id="ensure-that-we-can-pivot">Ensure that we can pivot</h4>
-
-<p>When making broad decisions, trust that your expertise means you’re correct now, but realize that things will change and we may possibly need to pivot away from what you decide on. There is a cost to removing something from the codebase which far outweighs the cost of adding it.</p>
-
-<p>Everything is up for discussion, but pivoting on such a huge code base is a slow process so it’s always worth spending the extra time to consider how deeply we would be tied into the decision and how quickly we could change course.</p>
 
             </div>
         </div>
@@ -310,7 +305,7 @@
             <label class="card-title">General Principles</label>
             <ul class="listBlock">
                 <li>
-                    <a class="card-link  icon--link  is-active" href="/cru-web-styleguide/documentation/general/principles">Development Principles</a>
+                    <a class="card-link  icon--link" href="/cru-web-styleguide/documentation/general/principles">Development Principles</a>
                 </li>
                 <li>
                     <a class="card-link  icon--link" href="/cru-web-styleguide/documentation/general/getting-started">Getting Started</a>
@@ -334,7 +329,7 @@
         </li>
         <li>
             <label class="card-title">
-                <a href="/cru-web-styleguide/styleguide/git/" class="card-link  icon--link ">Git</a>
+                <a href="/cru-web-styleguide/styleguide/git/" class="card-link  icon--link  is-active">Git</a>
             </label>
         </li>
     </ul>

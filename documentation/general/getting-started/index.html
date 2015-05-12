@@ -109,14 +109,27 @@
             <h1 class="page-title  styleguide-intro">Getting Started</h1>
             
             <div class="markdown-body">
-                <h2 id="contents">Contents</h2>
+                <p class="mb-">If you already have an existing `bower.json` file, run the following command:</p>
 
-<ul id="markdown-toc">
-  <li><a href="#contents">Contents</a></li>
-  <li><a href="#primary">Primary</a></li>
-</ul>
+<pre><code>bower install --save crubrand</code></pre>
 
-<h2 id="primary">Primary</h2>
+<p>Otherwise, create a bower project. If you are not sure what to enter in the prompts, use the default values (by hitting return):</p>
+
+<pre><code>bower init</code></pre>
+
+<p>After installing the project, install crubrand as a dependency:</p>
+
+<pre><code>bower install --save crubrand</code></pre>
+
+<p>You can change the release number to meet your needs. For more information about release numbers see <a href="this project">this project</a>.</p>
+
+<p>When needed you can update cruband using Bower. You may need to change the release number in the <code>bower.json</code> file if you are updating to a new version.</p>
+<pre><code>bower update</code></pre>
+
+<p>Once installed, <code>@import</code> into your project’s main scss file:</p>
+<pre><code>@import "bower_components/crubrand/crubrand";</code></pre>
+
+<p>You can <a href="https://github.com/CruGlobal/crubrand-web-template">see a sample project</a> with examples of a basic and more involved way to use crubrand</p>
 
             </div>
         </div>

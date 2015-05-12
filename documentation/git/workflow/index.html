@@ -98,6 +98,8 @@
         
             <nav class="card">
     <a class="card-link  icon--link  is-active" href="/cru-web-styleguide/documentation/git/workflow">Workflow</a>
+    <a class="card-link  icon--link" href="/cru-web-styleguide/documentation/git/guidelines">Guidelines</a>
+    <a class="card-link  icon--link" href="/cru-web-styleguide/documentation/git/code-review">Code Review</a>
 </nav>
 
         
@@ -108,7 +110,50 @@
             <h1 class="page-title  styleguide-intro">Workflow</h1>
             
             <div class="markdown-body">
-                
+                <p class="mb-">This is the workflow you should adopt for a typical feature.</p>
+
+<ul>
+  <li>Get the latest version of master</li>
+</ul>
+
+<pre>
+<code>git pull origin master</code>
+</pre>
+
+<ul>
+  <li>Create your own feature branch, prefixed by your initials. Branches should be scoped to one feature and short-lived.</li>
+</ul>
+
+<pre>
+<code>git checkout -b jd-feature</code>
+</pre>
+
+<ul>
+  <li>
+    <p>Discuss the feature with another developer, they should eventually review your code.</p>
+  </li>
+  <li>
+    <p>Do some work</p>
+  </li>
+  <li>
+    <p>Push to a remote branch, rebasing beforehand if you have redundant commits which should be squashed</p>
+  </li>
+  <li>
+    <p>Create a Pull Request</p>
+  </li>
+  <li>
+    <p>Ask/assign another developer to review the code. You should talk with them about the pull request whenever possible.</p>
+  </li>
+  <li>
+    <p>Reply to comments and make amends</p>
+  </li>
+  <li>
+    <p>The reviewer should merge into master once they give the request a :+1</p>
+  </li>
+  <li>
+    <p>Delete your feature branch</p>
+  </li>
+</ul>
 
             </div>
         </div>
