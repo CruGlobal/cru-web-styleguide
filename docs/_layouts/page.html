@@ -17,6 +17,9 @@ layout: default
         {% if page.type == "page-documentation-general" %}
             {% include sidenav-general.html %}
         {% endif %}
+        {% if page.type == "page-documentation-css" %}
+            {% include sidenav-css.html %}
+        {% endif %}
         {% if page.type == "page-documentation-js" %}
 
         {% endif %}
@@ -26,6 +29,7 @@ layout: default
         {% if page.type == "page-documentation-git" %}
             {% include sidenav-git.html %}
         {% endif %}
+
     </div>
     {% endunless %}
     <div class="pageContent markdown-body">

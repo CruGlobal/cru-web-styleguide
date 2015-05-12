@@ -1,7 +1,7 @@
 ---
 layout: page
 type: page-documentation-css
-title: CSS
+title: Code Guidelines
 page-class: page--documentation-css
 ---
 <p>Cru uses <a href="http://sass-lang.com/">SCSS</a> for CSS generation</p>
