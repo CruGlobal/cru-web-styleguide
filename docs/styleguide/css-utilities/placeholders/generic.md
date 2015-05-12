@@ -365,5 +365,5 @@ excerpt: These are single responsibility classes designed to help reduce duplica
 
 <div class="panel  panel-default  p  markdown-body">
     <h2 class="styleguide-title">Capital Case Element</h2>
-    <pre><code class=" language-sass" data-lang="scss">.u-posAbsolute</code></pre>
+    <pre><code class=" language-sass" data-lang="scss">%u-posAbsolute</code></pre>
 </div>
