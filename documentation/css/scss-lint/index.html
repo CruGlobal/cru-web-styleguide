@@ -15,7 +15,7 @@
     <meta name="author" content="">
 
     <title>
-      Colors &middot; Cru Styleguide
+      SCSS Lint &middot; Cru Styleguide
     </title>
     <script>
 /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon-precomposed" href="/cru-web-styleguide/img/apple-touch-icon-precomposed.png">
     <link rel="icon" href="/cru-web-styleguide/favicon.ico">
   </head>
-  <body class="page  ">
+  <body class="page  page--documentation-css">
 
     <header class="navbar  navbar-default  siteHeader">
         <hgroup class="titleGroup  navbar-header">
@@ -53,6 +53,8 @@
                 
                 
                 
+                    CSS
+                
                 
                 
                 
@@ -61,6 +63,22 @@
             <ul class="listInline  u-floatRight  subNav">
                 
 
+                
+                <li>
+                    <a href="/cru-web-styleguide/documentation/general/principles" class="secondaryNav-link  u-linkClean ">General Principles</a>
+                </li>
+                <li>
+                    <a href="/cru-web-styleguide/documentation/css/code-guidelines" class="secondaryNav-link  u-linkClean  is-active">CSS</a>
+                </li>
+                <li>
+                    <a href="/cru-web-styleguide/documentation/js/" class="secondaryNav-link  u-linkClean ">JS</a>
+                </li>
+                <li>
+                    <a href="/cru-web-styleguide/documentation/icons/" class="secondaryNav-link  u-linkClean ">Icons</a>
+                </li>
+                <li>
+                    <a href="/cru-web-styleguide/documentation/git/workflow" class="secondaryNav-link  u-linkClean ">Git</a>
+                </li>
                 
                 
             </ul>
@@ -76,6 +94,12 @@
         
         
         
+            <nav class="card">
+    <a class="card-link  icon--link" href="/cru-web-styleguide/documentation/css/code-guidelines">Code Guidelines</a>
+    <a class="card-link  icon--link  is-active" href="/cru-web-styleguide/documentation/css/scss-lint">SCSS Lint</a>
+</nav>
+
+        
         
         
         
@@ -84,24 +108,140 @@
     
     <div class="pageContent markdown-body">
         <div class="panel  panel-default  p">
-            <h1 class="page-title  styleguide-intro">Colors</h1>
+            <h1 class="page-title  styleguide-intro">SCSS Lint</h1>
+            
+                <p>We use <a href="https://github.com/brigade/scss-lint">scss-lint</a> to ensure our code follows the same general principles and to keep everything looking the same.</p>
             
             <div class="markdown-body">
-                <p>The look and feel of our company and product relies on using a handful of specific colors that help convey meaning and purpose.</p>
+                <h4 id="requirements">Requirements</h4>
 
-<h3 id="branding">Branding</h3>
+<ul>
+  <li>Ruby 1.9.3+</li>
+  <li>Sass 3.4.1+ (scss-lint 0.27.0 was the last version to support Sass 3.3)</li>
+  <li>Files you wish to lint must be written in SCSS (not Sass) syntax</li>
+</ul>
 
-<div class="swatch swatch-blue"></div>
-<div class="swatch swatch-green"></div>
-<div class="swatch swatch-red"></div>
-<div class="swatch swatch-orange"></div>
-<div class="swatch swatch-purple"></div>
+<h4 id="installation">Installation</h4>
 
-<h3 id="grayscale">Grayscale</h3>
+<pre><code>gem install scss_lint</code></pre>
 
-<div class="swatch swatch-gray-light"></div>
-<div class="swatch swatch-gray"></div>
-<div class="swatch swatch-gray-dark"></div>
+<h4 id="usage">Usage</h4>
+
+<p>Run <code>scss-lint</code> from the command-line by passing in a directory (or multiple directories) to recursively scan:</p>
+
+<pre><code>scss-lint app/assets/stylesheets/</code></pre>
+
+<p>You can also specify a list of files explicitly:</p>
+
+<pre><code>scss-lint app/assets/stylesheets/**/*.css.scss</code></pre>
+
+<p>See <a href="https://github.com/brigade/scss-lint">the documentation</a> for more information on configuration and advanced usage.</p>
+
+<h4 id="our-rules">Our rules</h4>
+
+<p>View <a href="https://github.com/CruGlobal/crubrand/blob/master/.scss-lint.yml">a live <code>scss-lint.yml</code> file</a>.</p>
+
+<ul>
+  <li>
+    <p>Space before !important, not after. [BangFormat]</p>
+  </li>
+  <li>
+    <p>Use <code>border: 0</code> instead of <code>border: none</code>. [BorderZero]</p>
+  </li>
+  <li>
+    <p>Do not use color keywords — such as <code>green</code> instead of <code>#008000</code>. [ColorKeyword]</p>
+  </li>
+  <li>
+    <p>Do not leave <code>@debug</code> statements in your code. Clean up after yourself. [DebugStatement]</p>
+  </li>
+  <li>
+    <p>Do not define any property more than once within a single rule set. [DuplicateProperty]</p>
+  </li>
+  <li>
+    <p>Put <code>@else</code> on a new line from the curly brace it follows. [ElsePlacement]</p>
+  </li>
+  <li>
+    <p>Include an empty line between all statements — i.e. rule sets, at-rules, and Sass directives. Even the nested ones. Spaces help people, and people are important. (Variable definitions are like properties and don’t need to be spaced.) [EmptyLineBetweenBlocks]</p>
+  </li>
+  <li>
+    <p>Do not leave empty rule sets in your code. [EmptyRule]</p>
+  </li>
+  <li>
+    <p>End each file with an empty newline. [FinalNewline]</p>
+  </li>
+  <li>
+    <p>Use the shortest possible hex value. <code>#fff</code> instead of <code>#ffffff</code>. [HexLength]</p>
+  </li>
+  <li>
+    <p>Use lowercase letters inside hex values. <code>#fff</code> instead of <code>#FFF</code>. [HexNotation]</p>
+  </li>
+  <li>
+    <p>Only use three or six hexidecimal characters. [HexValidation]</p>
+  </li>
+  <li>
+    <p>Never use ID selectors in your stylesheets. Find another way. (No, this is not “throwing out the baby with the bath water”. This is “not pooping in the bath”.) [IdSelector]</p>
+  </li>
+  <li>
+    <p>Do not include leading underscores or filename extensions in the basenames of SCSS files that you @import. <code>@import generic/reset</code> instead of <code>@import horse/_donkey.scss</code>;. [ImportPath]</p>
+  </li>
+  <li>
+    <p>Indent using 4 spaces. Or soft-tabs. [Indentation]</p>
+  </li>
+  <li>
+    <p>Do include an unnecessary leading zero before decimal values less than 1. <code>0.5em</code> instead of <code>.5em</code>. It improves readability. [LeadingZero]</p>
+  </li>
+  <li>
+    <p>Ensure that there are not repeat selectors, with different styles in a single stylesheet. [MergeableSelector]</p>
+  </li>
+  <li>
+    <p>Do not nest selectors more than 3 levels deep. Zero levels of nesting is best, of course. One level is often handy, and arguably helps organize some common code (especially pseudo-classes and pseudo-elements). Two or three raises eyebrows and specificity. More invites (induces?) disaster. [NestingDepth]</p>
+  </li>
+  <li>
+    <p><code>@extend</code> placeholders only. This practice will help prevent some common <code>@extend</code>-related mistakes and misunderstandings. [PlaceholderInExtend]</p>
+  </li>
+  <li>
+    <p>Do not misspell properties. In fact, do not misspell anything, ever. [PropertySpelling]</p>
+  </li>
+  <li>
+    <p>Do not qualify type selectors. Better yet, don’t use them at all, if possible: just use classes. [QualifyingElement]</p>
+  </li>
+  <li>
+    <p>Do not chain more than three simple selectors. In almost every case, one simple selector is best (that is, no chaining, flat specificity, world peace). Some situations call for two. But let’s just draw the line at three. Find another way. [SelectorDepth]</p>
+  </li>
+  <li>
+    <p>Use shorthand properties when you can. But only when necessary [Shorthand]</p>
+  </li>
+  <li>
+    <p>Include a line break between each declaration. Keep declarations isolated: that way you can monitor and discipline them more easily. [SingleLinePerProperty]</p>
+  </li>
+  <li>
+    <p>Include a line break between each selector in a group. [SingleLinePerSelector]</p>
+  </li>
+  <li>
+    <p>Include spaces after commas and colons, not before. As in written English. [SpaceAfterComma, SpaceAfterPropertyColon, SpaceAfterPropertyName]</p>
+  </li>
+  <li>
+    <p>Include a single space between selectors and the curly braces that begin declaration blocks. [SpaceBeforeBrace]</p>
+  </li>
+  <li>
+    <p>Do not include spaces between parentheses and parenthesized. As in written English. [SpaceBetweenParens]</p>
+  </li>
+  <li>
+    <p>Use double quotation marks. [StringQuotes]</p>
+  </li>
+  <li>
+    <p>Do not include unnecessary trailing zeros after a decimal point. <code>2em</code> instead of <code>2.0em</code>. [TrailingZero, UnnecessaryMantissa]</p>
+  </li>
+  <li>
+    <p>Include quotation marks around URLs. SCSS-Lint documentation <a href="https://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md#urlquotes">explains why</a>. [UrlQuotes]</p>
+  </li>
+  <li>
+    <p>Do not type vendor prefixes. You have too much life to live. We use Bourbon mixins. [VendorPrefixes]</p>
+  </li>
+  <li>
+    <p>Do not include units on zero values. It could be zero of anything: we don’t have to know. [ZeroUnit]</p>
+  </li>
+</ul>
 
             </div>
         </div>
@@ -289,7 +429,7 @@
         </li>
         <li>
             <label class="card-title">
-                <a href="/cru-web-styleguide/documentation/css/" class="card-link  icon--link ">CSS</a>
+                <a href="/cru-web-styleguide/documentation/css/" class="card-link  icon--link  is-active">CSS</a>
             </label>
         </li>
         <li>
