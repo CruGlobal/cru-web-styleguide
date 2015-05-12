@@ -30,6 +30,6 @@ title: Workflow
 
 - Reply to comments and make amends
 
-- The reviewer should merge into master once the request receives a +1
+- The reviewer should merge into master once they give the request a :+1
 
 - Delete your feature branch
